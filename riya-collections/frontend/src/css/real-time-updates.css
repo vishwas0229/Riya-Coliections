@@ -1,0 +1,415 @@
+/**
+ * Real-time Updates CSS
+ * Styles for real-time update animations and indicators
+ */
+
+/* Update animations */
+@keyframes updatePulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes updateGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(233, 30, 99, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(233, 30, 99, 0);
+  }
+}
+
+@keyframes updateSlide {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes updateBounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -8px, 0);
+  }
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* Updated element styles */
+.updated {
+  animation: updatePulse 0.3s ease-in-out;
+}
+
+.cart-count.updated,
+.cart-total.updated {
+  animation: updateBounce 0.6s ease-in-out;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.stock-status.updated {
+  animation: updateGlow 0.5s ease-in-out;
+}
+
+.order-status.updated {
+  animation: updateSlide 0.3s ease-in-out;
+}
+
+[data-price].updated {
+  animation: updatePulse 0.4s ease-in-out;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+[data-stock-quantity].updated {
+  animation: updateGlow 0.5s ease-in-out;
+}
+
+/* Stock status indicators */
+.stock-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.stock-status.in-stock {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.stock-status.low-stock {
+  background-color: rgba(255, 152, 0, 0.1);
+  color: #FF9800;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  animation: updatePulse 2s infinite;
+}
+
+.stock-status.out-of-stock {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #F44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* Order status indicators */
+.order-status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.order-status.status-pending {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #FFC107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.order-status.status-confirmed {
+  background-color: rgba(33, 150, 243, 0.1);
+  color: #2196F3;
+  border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.order-status.status-processing {
+  background-color: rgba(156, 39, 176, 0.1);
+  color: #9C27B0;
+  border: 1px solid rgba(156, 39, 176, 0.3);
+}
+
+.order-status.status-shipped {
+  background-color: rgba(255, 152, 0, 0.1);
+  color: #FF9800;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.order-status.status-delivered {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.order-status.status-cancelled {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #F44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* Cart update indicators */
+.cart-indicator {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-indicator::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.cart-indicator.has-updates::after {
+  opacity: 1;
+  transform: scale(1);
+  animation: updatePulse 1s infinite;
+}
+
+/* Price change indicators */
+.price-change {
+  position: relative;
+  display: inline-block;
+}
+
+.price-change.price-increased::before {
+  content: '↗';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  color: #F44336;
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: updateSlide 0.5s ease-in-out forwards;
+}
+
+.price-change.price-decreased::before {
+  content: '↘';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  color: #4CAF50;
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: updateSlide 0.5s ease-in-out forwards;
+}
+
+/* Real-time status indicator */
+.real-time-status {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.real-time-status.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.real-time-status::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: updatePulse 2s infinite;
+}
+
+.real-time-status.offline::before {
+  background-color: #F44336;
+  animation: none;
+}
+
+/* Loading states for real-time updates */
+.real-time-loading {
+  position: relative;
+  opacity: 0.7;
+}
+
+.real-time-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Notification styles for real-time updates */
+.real-time-notification {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+}
+
+.real-time-notification .notification-icon {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .real-time-status {
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+  
+  .stock-status,
+  .order-status {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+  
+  .price-change.price-increased::before,
+  .price-change.price-decreased::before {
+    font-size: 0.7rem;
+    top: -6px;
+    right: -6px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .stock-status.in-stock {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .stock-status.low-stock {
+    background-color: #FF9800;
+    color: white;
+  }
+  
+  .stock-status.out-of-stock {
+    background-color: #F44336;
+    color: white;
+  }
+  
+  .order-status {
+    border-width: 2px;
+    font-weight: 600;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .updated,
+  .cart-count.updated,
+  .cart-total.updated,
+  .stock-status.updated,
+  .order-status.updated,
+  [data-price].updated,
+  [data-stock-quantity].updated {
+    animation: none;
+  }
+  
+  .stock-status.low-stock {
+    animation: none;
+  }
+  
+  .cart-indicator.has-updates::after {
+    animation: none;
+  }
+  
+  .real-time-status::before {
+    animation: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .real-time-status {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .stock-status.in-stock {
+    background-color: rgba(76, 175, 80, 0.2);
+  }
+  
+  .stock-status.low-stock {
+    background-color: rgba(255, 152, 0, 0.2);
+  }
+  
+  .stock-status.out-of-stock {
+    background-color: rgba(244, 67, 54, 0.2);
+  }
+  
+  .order-status.status-pending {
+    background-color: rgba(255, 193, 7, 0.2);
+  }
+  
+  .order-status.status-confirmed {
+    background-color: rgba(33, 150, 243, 0.2);
+  }
+  
+  .order-status.status-processing {
+    background-color: rgba(156, 39, 176, 0.2);
+  }
+  
+  .order-status.status-shipped {
+    background-color: rgba(255, 152, 0, 0.2);
+  }
+  
+  .order-status.status-delivered {
+    background-color: rgba(76, 175, 80, 0.2);
+  }
+  
+  .order-status.status-cancelled {
+    background-color: rgba(244, 67, 54, 0.2);
+  }
+}

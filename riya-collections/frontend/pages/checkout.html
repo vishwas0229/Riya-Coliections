@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Riya Collections</title>
+    <meta name="description" content="Complete your purchase securely with multiple payment options. Fast checkout process for your cosmetic products.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../src/css/main.css" as="style">
+    <link rel="preload" href="../src/css/checkout.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/checkout.css">
+    <link rel="stylesheet" href="../src/css/accessibility.css">
+    
+    <!-- Font preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Razorpay SDK -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <img src="../assets/logo.svg" alt="Riya Collections" class="nav__logo">
+                <span class="nav__title">Riya Collections</span>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#categories" class="nav__link">Categories</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="products.html" class="nav__link">Products</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="cart.html" class="nav__cart" aria-label="Shopping cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="nav__cart-count" id="cart-count">0</span>
+                </a>
+                
+                <div class="nav__user">
+                    <button class="nav__user-btn" id="user-btn" aria-label="User account">
+                        <i class="ri-user-line"></i>
+                    </button>
+                    <div class="nav__user-menu" id="user-menu">
+                        <a href="login.html" class="nav__user-link">Login</a>
+                        <a href="register.html" class="nav__user-link">Register</a>
+                        <a href="profile.html" class="nav__user-link">Profile</a>
+                        <a href="orders.html" class="nav__user-link">Orders</a>
+                    </div>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header__content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item">
+                                <a href="../index.html" class="breadcrumb__link">Home</a>
+                            </li>
+                            <li class="breadcrumb__item">
+                                <a href="cart.html" class="breadcrumb__link">Cart</a>
+                            </li>
+                            <li class="breadcrumb__item" aria-current="page">
+                                <span class="breadcrumb__current">Checkout</span>
+                            </li>
+                        </ol>
+                    </nav>
+                    
+                    <h1 class="page-header__title">Secure Checkout</h1>
+                    <p class="page-header__description">
+                        Complete your purchase safely and securely
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout Content -->
+        <section class="checkout-section">
+            <div class="container">
+                <!-- Loading State -->
+                <div class="checkout-loading" id="checkout-loading">
+                    <div class="loading-content">
+                        <div class="loading-spinner"></div>
+                        <p>Loading checkout...</p>
+                    </div>
+                </div>
+
+                <!-- Checkout Content -->
+                <div class="checkout-content" id="checkout-content" style="display: none;">
+                    <!-- Progress Steps -->
+                    <nav class="checkout-progress" aria-label="Checkout progress">
+                        <ol class="progress-steps">
+                            <li class="progress-step active" data-step="1" aria-current="step">
+                                <div class="step-number">1</div>
+                                <div class="step-label">Shipping</div>
+                            </li>
+                            <li class="progress-step" data-step="2">
+                                <div class="step-number">2</div>
+                                <div class="step-label">Payment</div>
+                            </li>
+                            <li class="progress-step" data-step="3">
+                                <div class="step-number">3</div>
+                                <div class="step-label">Review</div>
+                            </li>
+                            <li class="progress-step" data-step="4">
+                                <div class="step-number">4</div>
+                                <div class="step-label">Complete</div>
+                            </li>
+                        </ol>
+                        <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Checkout progress">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                    </nav>
+
+                    <div class="checkout-layout">
+                        <!-- Checkout Form -->
+                        <div class="checkout-form">
+                            <!-- Step 1: Shipping Information -->
+                            <div class="checkout-step" id="step-1" data-step="1">
+                                <div class="step-header">
+                                    <h2 class="step-title">
+                                        <i class="ri-truck-line"></i>
+                                        Shipping Information
+                                    </h2>
+                                    <p class="step-description">Where should we deliver your order?</p>
+                                </div>
+
+                                <div class="step-content">
+                                    <!-- Saved Addresses -->
+                                    <div class="saved-addresses" id="saved-addresses" style="display: none;">
+                                        <h3 class="section-title">Saved Addresses</h3>
+                                        <div class="addresses-grid" id="addresses-grid">
+                                            <!-- Saved addresses will be loaded here -->
+                                        </div>
+                                        <button class="btn btn--outline add-address-btn" id="add-new-address-btn">
+                                            <i class="ri-add-line"></i>
+                                            Add New Address
+                                        </button>
+                                    </div>
+
+                                    <!-- Address Form -->
+                                    <div class="address-form" id="address-form">
+                                        <h3 class="section-title">Delivery Address</h3>
+                                        <form class="form" id="shipping-form">
+                                            <div class="form-row">
+                                                <div class="form-group">
+                                                    <label for="first-name" class="form-label">First Name *</label>
+                                                    <input type="text" 
+                                                           id="first-name" 
+                                                           name="firstName" 
+                                                           class="form-input" 
+                                                           required
+                                                           autocomplete="given-name">
+                                                    <div class="form-error" id="first-name-error"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="last-name" class="form-label">Last Name *</label>
+                                                    <input type="text" 
+                                                           id="last-name" 
+                                                           name="lastName" 
+                                                           class="form-input" 
+                                                           required
+                                                           autocomplete="family-name">
+                                                    <div class="form-error" id="last-name-error"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="phone" class="form-label">Phone Number *</label>
+                                                <input type="tel" 
+                                                       id="phone" 
+                                                       name="phone" 
+                                                       class="form-input" 
+                                                       required
+                                                       placeholder="+91 98765 43210"
+                                                       autocomplete="tel">
+                                                <div class="form-error" id="phone-error"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="address-line1" class="form-label">Address Line 1 *</label>
+                                                <input type="text" 
+                                                       id="address-line1" 
+                                                       name="addressLine1" 
+                                                       class="form-input" 
+                                                       required
+                                                       placeholder="House/Flat No., Building Name"
+                                                       autocomplete="address-line1">
+                                                <div class="form-error" id="address-line1-error"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="address-line2" class="form-label">Address Line 2</label>
+                                                <input type="text" 
+                                                       id="address-line2" 
+                                                       name="addressLine2" 
+                                                       class="form-input" 
+                                                       placeholder="Street, Area, Landmark"
+                                                       autocomplete="address-line2">
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group">
+                                                    <label for="city" class="form-label">City *</label>
+                                                    <input type="text" 
+                                                           id="city" 
+                                                           name="city" 
+                                                           class="form-input" 
+                                                           required
+                                                           autocomplete="address-level2">
+                                                    <div class="form-error" id="city-error"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="state" class="form-label">State *</label>
+                                                    <select id="state" name="state" class="form-select" required>
+                                                        <option value="">Select State</option>
+                                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                        <option value="Assam">Assam</option>
+                                                        <option value="Bihar">Bihar</option>
+                                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                                        <option value="Goa">Goa</option>
+                                                        <option value="Gujarat">Gujarat</option>
+                                                        <option value="Haryana">Haryana</option>
+                                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                        <option value="Jharkhand">Jharkhand</option>
+                                                        <option value="Karnataka">Karnataka</option>
+                                                        <option value="Kerala">Kerala</option>
+                                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                        <option value="Maharashtra">Maharashtra</option>
+                                                        <option value="Manipur">Manipur</option>
+                                                        <option value="Meghalaya">Meghalaya</option>
+                                                        <option value="Mizoram">Mizoram</option>
+                                                        <option value="Nagaland">Nagaland</option>
+                                                        <option value="Odisha">Odisha</option>
+                                                        <option value="Punjab">Punjab</option>
+                                                        <option value="Rajasthan">Rajasthan</option>
+                                                        <option value="Sikkim">Sikkim</option>
+                                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                                        <option value="Telangana">Telangana</option>
+                                                        <option value="Tripura">Tripura</option>
+                                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                        <option value="Uttarakhand">Uttarakhand</option>
+                                                        <option value="West Bengal">West Bengal</option>
+                                                        <option value="Delhi">Delhi</option>
+                                                    </select>
+                                                    <div class="form-error" id="state-error"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group">
+                                                    <label for="postal-code" class="form-label">PIN Code *</label>
+                                                    <input type="text" 
+                                                           id="postal-code" 
+                                                           name="postalCode" 
+                                                           class="form-input" 
+                                                           required
+                                                           pattern="[0-9]{6}"
+                                                           placeholder="400001"
+                                                           autocomplete="postal-code">
+                                                    <div class="form-error" id="postal-code-error"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="address-type" class="form-label">Address Type</label>
+                                                    <select id="address-type" name="addressType" class="form-select">
+                                                        <option value="home">Home</option>
+                                                        <option value="work">Work</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="checkbox-label">
+                                                    <input type="checkbox" id="save-address" name="saveAddress" class="checkbox-input">
+                                                    <span class="checkbox-custom"></span>
+                                                    <span class="checkbox-text">Save this address for future orders</span>
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="step-actions">
+                                    <button class="btn btn--primary btn--large" id="continue-to-payment">
+                                        Continue to Payment
+                                        <i class="ri-arrow-right-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Payment Method -->
+                            <div class="checkout-step" id="step-2" data-step="2" style="display: none;">
+                                <div class="step-header">
+                                    <h2 class="step-title">
+                                        <i class="ri-secure-payment-line"></i>
+                                        Payment Method
+                                    </h2>
+                                    <p class="step-description">Choose your preferred payment method</p>
+                                </div>
+
+                                <div class="step-content">
+                                    <div class="payment-methods">
+                                        <!-- Razorpay Payment -->
+                                        <div class="payment-method" data-method="razorpay">
+                                            <label class="payment-method-label">
+                                                <input type="radio" name="paymentMethod" value="razorpay" class="payment-radio" checked>
+                                                <div class="payment-method-content">
+                                                    <div class="payment-method-header">
+                                                        <div class="payment-method-icon">
+                                                            <i class="ri-bank-card-line"></i>
+                                                        </div>
+                                                        <div class="payment-method-info">
+                                                            <h3 class="payment-method-title">Online Payment</h3>
+                                                            <p class="payment-method-description">Pay securely using UPI, Cards, Net Banking, or Wallets</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="payment-method-badges">
+                                                        <span class="payment-badge">UPI</span>
+                                                        <span class="payment-badge">Cards</span>
+                                                        <span class="payment-badge">Net Banking</span>
+                                                        <span class="payment-badge">Wallets</span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <!-- Cash on Delivery -->
+                                        <div class="payment-method" data-method="cod">
+                                            <label class="payment-method-label">
+                                                <input type="radio" name="paymentMethod" value="cod" class="payment-radio">
+                                                <div class="payment-method-content">
+                                                    <div class="payment-method-header">
+                                                        <div class="payment-method-icon">
+                                                            <i class="ri-money-dollar-circle-line"></i>
+                                                        </div>
+                                                        <div class="payment-method-info">
+                                                            <h3 class="payment-method-title">Cash on Delivery</h3>
+                                                            <p class="payment-method-description">Pay when your order is delivered to your doorstep</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="payment-method-note">
+                                                        <i class="ri-information-line"></i>
+                                                        <span>Additional ₹25 handling charges may apply</span>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Security Information -->
+                                    <div class="security-info">
+                                        <div class="security-badges">
+                                            <div class="security-badge">
+                                                <i class="ri-shield-check-line"></i>
+                                                <span>SSL Secured</span>
+                                            </div>
+                                            <div class="security-badge">
+                                                <i class="ri-lock-line"></i>
+                                                <span>256-bit Encryption</span>
+                                            </div>
+                                            <div class="security-badge">
+                                                <i class="ri-verified-badge-line"></i>
+                                                <span>PCI Compliant</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-actions">
+                                    <button class="btn btn--outline" id="back-to-shipping">
+                                        <i class="ri-arrow-left-line"></i>
+                                        Back to Shipping
+                                    </button>
+                                    <button class="btn btn--primary btn--large" id="continue-to-review">
+                                        Review Order
+                                        <i class="ri-arrow-right-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Order Review -->
+                            <div class="checkout-step" id="step-3" data-step="3" style="display: none;">
+                                <div class="step-header">
+                                    <h2 class="step-title">
+                                        <i class="ri-file-list-3-line"></i>
+                                        Review Your Order
+                                    </h2>
+                                    <p class="step-description">Please review your order details before placing</p>
+                                </div>
+
+                                <div class="step-content">
+                                    <!-- Order Items Review -->
+                                    <div class="order-review-section">
+                                        <h3 class="section-title">Order Items</h3>
+                                        <div class="order-items-review" id="order-items-review">
+                                            <!-- Order items will be loaded here -->
+                                        </div>
+                                    </div>
+
+                                    <!-- Shipping Address Review -->
+                                    <div class="order-review-section">
+                                        <h3 class="section-title">
+                                            Shipping Address
+                                            <button class="edit-btn" id="edit-shipping-address">
+                                                <i class="ri-edit-line"></i>
+                                                Edit
+                                            </button>
+                                        </h3>
+                                        <div class="address-review" id="shipping-address-review">
+                                            <!-- Shipping address will be displayed here -->
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment Method Review -->
+                                    <div class="order-review-section">
+                                        <h3 class="section-title">
+                                            Payment Method
+                                            <button class="edit-btn" id="edit-payment-method">
+                                                <i class="ri-edit-line"></i>
+                                                Edit
+                                            </button>
+                                        </h3>
+                                        <div class="payment-review" id="payment-method-review">
+                                            <!-- Payment method will be displayed here -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-actions">
+                                    <button class="btn btn--outline" id="back-to-payment">
+                                        <i class="ri-arrow-left-line"></i>
+                                        Back to Payment
+                                    </button>
+                                    <button class="btn btn--primary btn--large" id="place-order-btn">
+                                        <i class="ri-secure-payment-line"></i>
+                                        <span class="btn-text">Place Order</span>
+                                        <div class="btn-loading" style="display: none;">
+                                            <div class="loading-spinner"></div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 4: Order Confirmation -->
+                            <div class="checkout-step" id="step-4" data-step="4" style="display: none;">
+                                <div class="order-success">
+                                    <div class="success-icon">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                    <h2 class="success-title">Order Placed Successfully!</h2>
+                                    <p class="success-message">
+                                        Thank you for your purchase. Your order has been confirmed and will be processed shortly.
+                                    </p>
+                                    
+                                    <div class="order-details" id="order-confirmation-details">
+                                        <!-- Order confirmation details will be loaded here -->
+                                    </div>
+
+                                    <div class="success-actions">
+                                        <a href="orders.html" class="btn btn--primary">
+                                            <i class="ri-file-list-line"></i>
+                                            View Order Details
+                                        </a>
+                                        <a href="products.html" class="btn btn--outline">
+                                            <i class="ri-shopping-bag-line"></i>
+                                            Continue Shopping
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary Sidebar -->
+                        <div class="order-summary">
+                            <div class="summary-card">
+                                <h3 class="summary-title">Order Summary</h3>
+                                
+                                <!-- Order Items -->
+                                <div class="summary-items" id="summary-items">
+                                    <!-- Order items will be loaded here -->
+                                </div>
+
+                                <!-- Price Breakdown -->
+                                <div class="price-breakdown">
+                                    <div class="price-row">
+                                        <span class="price-label">Subtotal</span>
+                                        <span class="price-value" id="summary-subtotal">₹0.00</span>
+                                    </div>
+                                    
+                                    <div class="price-row discount-row" id="summary-discount-row" style="display: none;">
+                                        <span class="price-label">
+                                            Discount
+                                            <span class="discount-code" id="summary-discount-code"></span>
+                                        </span>
+                                        <span class="price-value discount-value" id="summary-discount">-₹0.00</span>
+                                    </div>
+                                    
+                                    <div class="price-row">
+                                        <span class="price-label">Shipping</span>
+                                        <span class="price-value" id="summary-shipping">₹0.00</span>
+                                    </div>
+                                    
+                                    <div class="price-row">
+                                        <span class="price-label">Tax (GST)</span>
+                                        <span class="price-value" id="summary-tax">₹0.00</span>
+                                    </div>
+                                    
+                                    <div class="price-divider"></div>
+                                    
+                                    <div class="price-row total-row">
+                                        <span class="price-label">Total</span>
+                                        <span class="price-value total-value" id="summary-total">₹0.00</span>
+                                    </div>
+                                </div>
+
+                                <!-- Security Badges -->
+                                <div class="checkout-security">
+                                    <div class="security-badges">
+                                        <div class="security-badge">
+                                            <i class="ri-shield-check-line"></i>
+                                            <span>Secure Checkout</span>
+                                        </div>
+                                        <div class="security-badge">
+                                            <i class="ri-truck-line"></i>
+                                            <span>Free Shipping on ₹500+</span>
+                                        </div>
+                                        <div class="security-badge">
+                                            <i class="ri-refresh-line"></i>
+                                            <span>Easy Returns</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Templates -->
+    
+    <!-- Saved Address Template -->
+    <template id="saved-address-template">
+        <div class="address-card" data-address-id="">
+            <div class="address-content">
+                <div class="address-header">
+                    <h4 class="address-name"></h4>
+                    <span class="address-type-badge"></span>
+                </div>
+                <div class="address-details">
+                    <p class="address-text"></p>
+                    <p class="address-phone"></p>
+                </div>
+            </div>
+            <div class="address-actions">
+                <button class="btn btn--sm btn--outline edit-address-btn">Edit</button>
+                <button class="btn btn--sm btn--primary select-address-btn">Select</button>
+            </div>
+        </div>
+    </template>
+
+    <!-- Order Item Review Template -->
+    <template id="order-item-review-template">
+        <div class="order-item-review">
+            <div class="item-image">
+                <img src="" alt="" class="product-image">
+            </div>
+            <div class="item-details">
+                <h4 class="item-name"></h4>
+                <p class="item-brand"></p>
+                <div class="item-quantity">Qty: <span></span></div>
+            </div>
+            <div class="item-price">
+                <span class="price-amount"></span>
+            </div>
+        </div>
+    </template>
+
+    <!-- Summary Item Template -->
+    <template id="summary-item-template">
+        <div class="summary-item">
+            <div class="item-image">
+                <img src="" alt="" class="product-image">
+            </div>
+            <div class="item-info">
+                <h4 class="item-name"></h4>
+                <div class="item-details">
+                    <span class="item-quantity">Qty: </span>
+                    <span class="item-price"></span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <div class="footer__section">
+                        <div class="footer__brand">
+                            <img src="../assets/logo.svg" alt="Riya Collections" class="footer__logo">
+                            <h3 class="footer__title">Riya Collections</h3>
+                        </div>
+                        <p class="footer__description">
+                            Your trusted destination for premium cosmetics and beauty products. 
+                            Discover, shop, and enhance your natural beauty with our curated collection.
+                        </p>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-link" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Instagram">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Twitter">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Quick Links</h4>
+                        <ul class="footer__links">
+                            <li><a href="products.html" class="footer__link">All Products</a></li>
+                            <li><a href="products.html?category=1" class="footer__link">Face Makeup</a></li>
+                            <li><a href="products.html?category=2" class="footer__link">Lip Care</a></li>
+                            <li><a href="products.html?category=3" class="footer__link">Hair Care</a></li>
+                            <li><a href="products.html?category=4" class="footer__link">Skin Care</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Customer Service</h4>
+                        <ul class="footer__links">
+                            <li><a href="contact.html" class="footer__link">Contact Us</a></li>
+                            <li><a href="shipping.html" class="footer__link">Shipping Info</a></li>
+                            <li><a href="returns.html" class="footer__link">Returns & Exchanges</a></li>
+                            <li><a href="faq.html" class="footer__link">FAQ</a></li>
+                            <li><a href="size-guide.html" class="footer__link">Size Guide</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Account</h4>
+                        <ul class="footer__links">
+                            <li><a href="login.html" class="footer__link">Login</a></li>
+                            <li><a href="register.html" class="footer__link">Register</a></li>
+                            <li><a href="profile.html" class="footer__link">My Account</a></li>
+                            <li><a href="orders.html" class="footer__link">Order History</a></li>
+                            <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer__bottom">
+                    <div class="footer__bottom-content">
+                        <p class="footer__copyright">
+                            &copy; 2024 Riya Collections. All rights reserved.
+                        </p>
+                        <div class="footer__legal">
+                            <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+                            <a href="terms.html" class="footer__legal-link">Terms of Service</a>
+                            <a href="cookies.html" class="footer__legal-link">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/api.js"></script>
+    <script src="../src/js/utils.js"></script>
+    <script src="../src/js/components/accessibility.js"></script>
+    <script src="../src/js/components/notifications.js"></script>
+    <script src="../src/js/components/navigation.js"></script>
+    <script src="../src/js/checkout.js"></script>
+    <script src="../src/js/main.js"></script>
+</body>
+</html>
