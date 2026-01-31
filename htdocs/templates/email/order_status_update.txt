@@ -1,0 +1,25 @@
+RIYA COLLECTIONS - ORDER STATUS UPDATE
+
+Dear {{customer_name}},
+
+Your order status has been updated. Here are the latest details:
+
+Order #{{order_number}}
+New Status: {{new_status}}
+{{status_message}}
+
+{{#tracking_number}}
+Tracking Information:
+- Tracking Number: {{tracking_number}}
+{{#estimated_delivery}}
+- Estimated Delivery: {{estimated_delivery}}
+{{/estimated_delivery}}
+{{/tracking_number}}
+
+You can view your complete order details at: {{order_url}}
+
+If you have any questions about your order, please contact our support team.
+
+---
+Riya Collections
+https://riyacollections.com

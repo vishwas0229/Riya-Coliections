@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Status Update</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { background: #2196F3; color: white; padding: 30px; text-align: center; }
+        .content { padding: 30px; }
+        .status-update { background: #e3f2fd; padding: 20px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #2196F3; }
+        .tracking-info { background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 15px 0; }
+        .button { display: inline-block; background: #2196F3; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; margin: 10px 0; }
+        .footer { background: #f5f5f5; padding: 20px; text-align: center; font-size: 12px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Order Status Update</h1>
+        </div>
+        <div class="content">
+            <p>Dear {{customer_name}},</p>
+            <p>Your order status has been updated. Here are the latest details:</p>
+            
+            <div class="status-update">
+                <h3>Order #{{order_number}}</h3>
+                <p><strong>New Status:</strong> {{new_status}}</p>
+                <p>{{status_message}}</p>
+            </div>
+            
+            {{#tracking_number}}
+            <div class="tracking-info">
+                <h4>Tracking Information</h4>
+                <p><strong>Tracking Number:</strong> {{tracking_number}}</p>
+                {{#estimated_delivery}}
+                <p><strong>Estimated Delivery:</strong> {{estimated_delivery}}</p>
+                {{/estimated_delivery}}
+            </div>
+            {{/tracking_number}}
+            
+            <p>You can view your complete order details and tracking information by clicking the button below:</p>
+            <p><a href="{{order_url}}" class="button">View Order Details</a></p>
+            
+            <p>If you have any questions about your order, please contact our support team.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Riya Collections. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

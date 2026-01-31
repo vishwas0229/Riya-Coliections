@@ -5,8 +5,8 @@
 
 // API Configuration
 const API_CONFIG = {
-  // Base URL for the backend API
-  BASE_URL: 'http://localhost:5000/api',
+  // Base URL for the backend API (PHP Backend)
+  BASE_URL: 'http://localhost/htdocs/api',
   
   // API Endpoints
   ENDPOINTS: {

@@ -1,0 +1,2883 @@
+[31-Jan-2026 09:30:39 UTC] Database connection attempt failed
+[31-Jan-2026 09:30:40 UTC] Database connection attempt failed
+[31-Jan-2026 09:30:42 UTC] Database connection attempt failed
+[31-Jan-2026 09:30:42 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 09:40:33 UTC] Database connection attempt failed
+[31-Jan-2026 09:40:34 UTC] Database connection attempt failed
+[31-Jan-2026 09:40:36 UTC] Database connection attempt failed
+[31-Jan-2026 09:40:36 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 09:41:18 UTC] Missing required environment variables: DB_NAME, DB_USER
+[31-Jan-2026 09:41:18 UTC] PHP Fatal error:  Uncaught Exception: Missing required environment variables: DB_NAME, DB_USER in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php:249
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php(319): validateEnvironment()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/jwt.php(11): require_once('...')
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/test_auth_no_db.php(6): require_once('...')
+#3 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 249
+[31-Jan-2026 09:50:47 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/AuthMiddleware.php(14): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/AuthMiddlewareTest.php(9): require_once('...')
+#6 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 10:00:37 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/index.php(28): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/test_router.php(20): require_once('...')
+#6 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 10:01:11 UTC] Database connection attempt failed
+[31-Jan-2026 10:01:12 UTC] Database connection attempt failed
+[31-Jan-2026 10:01:14 UTC] Database connection attempt failed
+[31-Jan-2026 10:01:14 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 10:01:14 UTC] Database initialization failed during include
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 42
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 51
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 52
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 53
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 82
+[31-Jan-2026 10:01:14 UTC] API error response
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Response.php on line 21
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Response.php on line 35
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Response.php on line 35
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Response.php on line 35
+[31-Jan-2026 10:01:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Response.php on line 35
+[31-Jan-2026 10:01:45 UTC] PHP Parse error:  Unclosed '{' on line 1 in /home/vishwas/Desktop/Riya-Collection/htdocs/test_router_simple.php(49) : eval()'d code on line 20
+[31-Jan-2026 10:07:03 UTC] PHP Fatal error:  Uncaught Error: Class "PHPUnit\Framework\TestCase" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ResponseTest.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ResponseTest.php on line 17
+[31-Jan-2026 10:11:13 UTC] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ResponseTest.php:24) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Response.php on line 21
+[31-Jan-2026 10:11:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ResponseTest.php:24) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Response.php on line 35
+[31-Jan-2026 10:11:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ResponseTest.php:24) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Response.php on line 35
+[31-Jan-2026 10:11:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ResponseTest.php:24) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Response.php on line 35
+[31-Jan-2026 10:11:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ResponseTest.php:24) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Response.php on line 35
+[31-Jan-2026 10:12:21 UTC] API error response
+[31-Jan-2026 10:12:21 UTC] API error response
+[31-Jan-2026 10:12:21 UTC] API error response
+[31-Jan-2026 10:12:21 UTC] API error response
+[31-Jan-2026 10:12:21 UTC] API error response
+[31-Jan-2026 10:12:21 UTC] API error response
+[31-Jan-2026 10:12:21 UTC] API error response
+[31-Jan-2026 10:12:21 UTC] JSON encoding failed
+[31-Jan-2026 10:12:53 UTC] API error response
+[31-Jan-2026 10:12:53 UTC] API error response
+[31-Jan-2026 10:12:53 UTC] API error response
+[31-Jan-2026 10:12:53 UTC] API error response
+[31-Jan-2026 10:12:53 UTC] API error response
+[31-Jan-2026 10:12:53 UTC] API error response
+[31-Jan-2026 10:12:53 UTC] API error response
+[31-Jan-2026 10:12:53 UTC] JSON encoding failed
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:01 UTC] API error response
+[31-Jan-2026 10:13:49 UTC] API error response
+[31-Jan-2026 10:41:31 UTC] PHP Fatal error:  Cannot redeclare class Logger (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Logger.php:14) in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/AuthMiddlewareSimpleTest.php on line 9
+[31-Jan-2026 10:41:45 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/DatabaseTest.php(14): require_once('...')
+#5 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 10:42:06 UTC] API error response
+[31-Jan-2026 10:42:06 UTC] API error response
+[31-Jan-2026 10:42:06 UTC] API error response
+[31-Jan-2026 10:42:06 UTC] API error response
+[31-Jan-2026 10:42:06 UTC] API error response
+[31-Jan-2026 10:42:06 UTC] API error response
+[31-Jan-2026 10:42:06 UTC] API error response
+[31-Jan-2026 10:42:06 UTC] JSON encoding failed
+[31-Jan-2026 10:42:13 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/services/AuthService.php(13): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/AuthServiceTest.php(11): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 10:42:28 UTC] Database connection attempt failed
+[31-Jan-2026 10:42:29 UTC] Database connection attempt failed
+[31-Jan-2026 10:42:31 UTC] Database connection attempt failed
+[31-Jan-2026 10:42:31 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 10:42:31 UTC] Database initialization failed during include
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 42
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 51
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 52
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 53
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 82
+[31-Jan-2026 10:42:31 UTC] API error response
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 138
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 287
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Undefined array key "REQUEST_URI" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 288
+[31-Jan-2026 10:42:31 UTC] PHP Warning:  Undefined array key "REQUEST_URI" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 320
+[31-Jan-2026 10:42:31 UTC] PHP Deprecated:  parse_url(): Passing null to parameter #1 ($url) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 321
+[31-Jan-2026 10:42:31 UTC] Router exception
+[31-Jan-2026 10:42:31 UTC] API error response
+[31-Jan-2026 10:42:31 UTC] PHP Fatal error:  Uncaught Error: Class "PHPUnit\Framework\TestCase" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/RouterTest.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/RouterTest.php on line 15
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:42:39 UTC] API error response
+[31-Jan-2026 10:43:12 UTC] Database connection attempt failed
+[31-Jan-2026 10:43:13 UTC] Database connection attempt failed
+[31-Jan-2026 10:43:15 UTC] Database connection attempt failed
+[31-Jan-2026 10:43:15 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 10:43:15 UTC] Database initialization failed during include
+[31-Jan-2026 10:43:15 UTC] Database connection attempt failed
+[31-Jan-2026 10:43:16 UTC] Database connection attempt failed
+[31-Jan-2026 10:43:18 UTC] Database connection attempt failed
+[31-Jan-2026 10:43:18 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 10:43:18 UTC] Health check failed
+[31-Jan-2026 10:50:02 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/User.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/UserTest.php(11): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 10:52:56 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/User.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/UserPropertyTest.php(11): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 11:00:43 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/services/AuthService.php(13): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/controllers/AuthController.php(11): require_once('...')
+#7 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/AuthControllerSimpleTest.php(8): require_once('...')
+#8 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 11:02:02 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 294
+[31-Jan-2026 11:02:02 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 295
+[31-Jan-2026 11:02:02 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 296
+[31-Jan-2026 11:02:02 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 297
+[31-Jan-2026 11:02:02 UTC] Database connection attempt failed
+[31-Jan-2026 11:02:03 UTC] Database connection attempt failed
+[31-Jan-2026 11:02:05 UTC] Database connection attempt failed
+[31-Jan-2026 11:02:05 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 11:02:05 UTC] Database initialization failed during include
+[31-Jan-2026 11:02:05 UTC] Database connection attempt failed
+[31-Jan-2026 11:02:06 UTC] Database connection attempt failed
+[31-Jan-2026 11:02:08 UTC] Database connection attempt failed
+[31-Jan-2026 11:02:08 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 12:24:22 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Product.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ProductTest.php(11): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 12:25:31 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Product.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ProductTest.php(11): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 12:26:20 UTC] PHP Fatal error:  Cannot redeclare class Database (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ProductSimpleTest.php:33) in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 46
+[31-Jan-2026 12:27:27 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Product.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ProductPropertyTest.php(11): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 12:36:47 UTC] PHP Fatal error:  Cannot redeclare class Database (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/CategorySimpleTest.php:12) in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 46
+[31-Jan-2026 12:38:31 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Category.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/CategoryPropertyTest.php(11): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 12:38:48 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Category.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/CategoryTest.php(11): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 12:39:31 UTC] Database connection attempt failed
+[31-Jan-2026 12:39:32 UTC] Database connection attempt failed
+[31-Jan-2026 12:39:34 UTC] Database connection attempt failed
+[31-Jan-2026 12:39:34 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 12:39:34 UTC] Database initialization failed during include
+[31-Jan-2026 12:39:34 UTC] Database connection attempt failed
+[31-Jan-2026 12:39:35 UTC] Database connection attempt failed
+[31-Jan-2026 12:39:37 UTC] Database connection attempt failed
+[31-Jan-2026 12:39:37 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 12:39:37 UTC] PHP Fatal error:  Uncaught Exception: Failed to establish database connection after 3 attempts in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:158
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(29): Database::getInstance()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Category.php(25): DatabaseModel->__construct()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/CategoryValidationTest.php(25): Category->__construct()
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/CategoryValidationTest.php(511): CategoryValidationTest->setUp()
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/CategoryValidationTest.php(540): CategoryValidationTest->runAllTests()
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 158
+[31-Jan-2026 12:50:54 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Product.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/controllers/ProductController.php(12): require_once('...')
+#7 /home/vishwas/Desktop/Riya-Collection/htdocs/test_product_controller_simple.php(14): require_once('...')
+#8 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 12:51:12 UTC] Database connection attempt failed
+[31-Jan-2026 12:51:13 UTC] Database connection attempt failed
+[31-Jan-2026 12:51:15 UTC] Database connection attempt failed
+[31-Jan-2026 12:51:15 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 12:51:15 UTC] Database initialization failed during include
+[31-Jan-2026 12:51:15 UTC] Database connection attempt failed
+[31-Jan-2026 12:51:16 UTC] Database connection attempt failed
+[31-Jan-2026 12:51:18 UTC] Database connection attempt failed
+[31-Jan-2026 12:51:18 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 12:51:54 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 294
+[31-Jan-2026 12:51:54 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 295
+[31-Jan-2026 12:51:54 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 296
+[31-Jan-2026 12:51:54 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 297
+[31-Jan-2026 12:51:54 UTC] Database connection attempt failed
+[31-Jan-2026 12:51:55 UTC] Database connection attempt failed
+[31-Jan-2026 12:51:57 UTC] Database connection attempt failed
+[31-Jan-2026 12:51:57 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 12:51:57 UTC] Database initialization failed during include
+[31-Jan-2026 12:51:57 UTC] PHP Fatal error:  Cannot redeclare class Product (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/test_product_controller_structure.php:55) in /home/vishwas/Desktop/Riya-Collection/htdocs/models/Product.php on line 17
+[31-Jan-2026 12:59:28 UTC] PHP Fatal error:  Uncaught Error: Class "PHPUnit\Framework\TestCase" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ImageServiceSimpleTest.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ImageServiceSimpleTest.php on line 14
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:51:38 UTC] PHP Deprecated:  finfo_file(): Passing null to parameter #2 ($filename) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 148
+[31-Jan-2026 13:51:38 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:53:32 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:25 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 13:54:53 UTC] Image upload failed
+[31-Jan-2026 14:16:56 UTC] Database connection attempt failed
+[31-Jan-2026 14:16:57 UTC] Database connection attempt failed
+[31-Jan-2026 14:16:59 UTC] Database connection attempt failed
+[31-Jan-2026 14:16:59 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:16:59 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:00 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:02 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:02 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:17:02 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:03 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:05 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:05 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:17:05 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:06 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:08 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:08 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:17:08 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:09 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:11 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:11 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:17:11 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:12 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:14 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:14 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:17:14 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:15 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:17 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:17 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:17:17 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:18 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:20 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:20 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:17:20 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:21 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:23 UTC] Database connection attempt failed
+[31-Jan-2026 14:17:23 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:17:52 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Product.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/controllers/ProductController.php(12): require_once('...')
+#7 /home/vishwas/Desktop/Riya-Collection/htdocs/test_image_endpoints_simple.php(7): require_once('...')
+#8 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 14:27:16 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Order.php(13): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/test_order_simple.php(9): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 14:28:49 UTC] Database connection attempt failed
+[31-Jan-2026 14:28:50 UTC] Database connection attempt failed
+[31-Jan-2026 14:28:52 UTC] Database connection attempt failed
+[31-Jan-2026 14:28:52 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:28:52 UTC] Database initialization failed during include
+[31-Jan-2026 14:28:52 UTC] Database connection attempt failed
+[31-Jan-2026 14:28:53 UTC] Database connection attempt failed
+[31-Jan-2026 14:28:55 UTC] Database connection attempt failed
+[31-Jan-2026 14:28:55 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:29:41 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Order.php(13): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/OrderTest.php(11): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 14:35:56 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Address.php(13): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/test_address_simple.php(8): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 14:38:11 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Address.php(13): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/test_address_simple.php(8): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 14:38:44 UTC] PHP Fatal error:  Cannot redeclare class Database (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/test_address_structure.php:9) in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 46
+[31-Jan-2026 14:39:44 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:45 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:47 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:47 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:39:47 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:48 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:50 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:50 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:39:50 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:51 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:53 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:53 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:39:53 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:54 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:56 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:56 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:39:56 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:57 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:59 UTC] Database connection attempt failed
+[31-Jan-2026 14:39:59 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:39:59 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:00 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:02 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:02 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:02 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:03 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:05 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:05 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:05 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:06 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:08 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:08 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:08 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:09 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:11 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:11 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:11 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:12 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:14 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:14 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:14 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:15 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:17 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:17 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:17 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:18 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:20 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:20 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:20 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:21 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:23 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:23 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:23 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:24 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:26 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:26 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:26 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:27 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:29 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:29 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:29 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:30 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:32 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:32 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:32 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:33 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:35 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:35 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:35 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:36 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:38 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:38 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:38 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:39 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:41 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:41 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:41 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:42 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:44 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:44 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:44 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:45 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:47 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:47 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:47 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:48 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:50 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:50 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:40:50 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:51 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:53 UTC] Database connection attempt failed
+[31-Jan-2026 14:40:53 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:49:11 UTC] Database connection attempt failed
+[31-Jan-2026 14:49:12 UTC] Database connection attempt failed
+[31-Jan-2026 14:49:14 UTC] Database connection attempt failed
+[31-Jan-2026 14:49:14 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:49:14 UTC] Database initialization failed during include
+[31-Jan-2026 14:49:14 UTC] Database connection attempt failed
+[31-Jan-2026 14:49:15 UTC] Database connection attempt failed
+[31-Jan-2026 14:49:17 UTC] Database connection attempt failed
+[31-Jan-2026 14:49:17 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:50:58 UTC] Database connection attempt failed
+[31-Jan-2026 14:50:59 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:01 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:01 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:01 UTC] Database initialization failed during include
+[31-Jan-2026 14:51:01 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:02 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:04 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:04 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:04 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:05 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:07 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:07 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:07 UTC] Singleton test failed
+[31-Jan-2026 14:51:07 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:08 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:10 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:10 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:10 UTC] Singleton test failed
+[31-Jan-2026 14:51:10 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:11 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:13 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:13 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:13 UTC] Singleton test failed
+[31-Jan-2026 14:51:13 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:14 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:16 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:16 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:16 UTC] Singleton test failed
+[31-Jan-2026 14:51:16 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:17 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:19 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:19 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:19 UTC] Singleton test failed
+[31-Jan-2026 14:51:19 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:20 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:22 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:22 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:22 UTC] Singleton test failed
+[31-Jan-2026 14:51:22 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:23 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:25 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:25 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:25 UTC] Singleton test failed
+[31-Jan-2026 14:51:25 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:26 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:28 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:28 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:28 UTC] Singleton test failed
+[31-Jan-2026 14:51:28 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:29 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:31 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:31 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:31 UTC] Singleton test failed
+[31-Jan-2026 14:51:31 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:32 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:34 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:34 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:34 UTC] Singleton test failed
+[31-Jan-2026 14:51:34 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:35 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:37 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:37 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:37 UTC] Singleton test failed
+[31-Jan-2026 14:51:37 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:38 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:40 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:40 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:40 UTC] Singleton test failed
+[31-Jan-2026 14:51:40 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:41 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:43 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:43 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:43 UTC] Singleton test failed
+[31-Jan-2026 14:51:43 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:44 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:46 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:46 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:46 UTC] Singleton test failed
+[31-Jan-2026 14:51:46 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:47 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:49 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:49 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:49 UTC] Singleton test failed
+[31-Jan-2026 14:51:49 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:50 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:52 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:52 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:52 UTC] Singleton test failed
+[31-Jan-2026 14:51:52 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:53 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:55 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:55 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:55 UTC] Singleton test failed
+[31-Jan-2026 14:51:55 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:56 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:58 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:58 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:51:58 UTC] Singleton test failed
+[31-Jan-2026 14:51:58 UTC] Database connection attempt failed
+[31-Jan-2026 14:51:59 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:01 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:01 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:52:01 UTC] Singleton test failed
+[31-Jan-2026 14:52:01 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:02 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:04 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:04 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:52:04 UTC] Singleton test failed
+[31-Jan-2026 14:52:35 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:36 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:38 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:38 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:52:38 UTC] Database initialization failed during include
+[31-Jan-2026 14:52:38 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:39 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:41 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:41 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:52:41 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:42 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:44 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:44 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:52:44 UTC] Singleton test failed
+[31-Jan-2026 14:52:44 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:45 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:47 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:47 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:52:47 UTC] Singleton test failed
+[31-Jan-2026 14:52:47 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:48 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:50 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:50 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:52:50 UTC] Singleton test failed
+[31-Jan-2026 14:52:50 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:51 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:53 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:53 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:52:53 UTC] Singleton test failed
+[31-Jan-2026 14:52:53 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:54 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:56 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:56 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:52:56 UTC] Singleton test failed
+[31-Jan-2026 14:52:56 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:57 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:59 UTC] Database connection attempt failed
+[31-Jan-2026 14:52:59 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:52:59 UTC] Singleton test failed
+[31-Jan-2026 14:52:59 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:00 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:02 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:02 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:02 UTC] Singleton test failed
+[31-Jan-2026 14:53:02 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:03 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:05 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:05 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:05 UTC] Singleton test failed
+[31-Jan-2026 14:53:05 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:06 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:08 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:08 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:08 UTC] Singleton test failed
+[31-Jan-2026 14:53:08 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:09 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:11 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:11 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:11 UTC] Singleton test failed
+[31-Jan-2026 14:53:11 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:12 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:14 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:14 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:14 UTC] Singleton test failed
+[31-Jan-2026 14:53:14 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:15 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:17 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:17 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:17 UTC] Singleton test failed
+[31-Jan-2026 14:53:17 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:18 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:20 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:20 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:20 UTC] Singleton test failed
+[31-Jan-2026 14:53:20 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:21 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:23 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:23 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:23 UTC] Singleton test failed
+[31-Jan-2026 14:53:23 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:24 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:26 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:26 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:26 UTC] Singleton test failed
+[31-Jan-2026 14:53:26 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:27 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:29 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:29 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:29 UTC] Singleton test failed
+[31-Jan-2026 14:53:29 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:30 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:32 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:32 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:32 UTC] Singleton test failed
+[31-Jan-2026 14:53:32 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:33 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:35 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:35 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:35 UTC] Singleton test failed
+[31-Jan-2026 14:53:35 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:36 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:38 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:38 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:38 UTC] Singleton test failed
+[31-Jan-2026 14:53:38 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:39 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:41 UTC] Database connection attempt failed
+[31-Jan-2026 14:53:41 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:53:41 UTC] Singleton test failed
+[31-Jan-2026 14:54:03 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:04 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:06 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:06 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:06 UTC] Database initialization failed during include
+[31-Jan-2026 14:54:06 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:07 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:09 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:09 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:09 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:10 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:12 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:12 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:12 UTC] Singleton test failed
+[31-Jan-2026 14:54:12 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:13 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:15 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:15 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:15 UTC] Singleton test failed
+[31-Jan-2026 14:54:15 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:16 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:18 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:18 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:18 UTC] Singleton test failed
+[31-Jan-2026 14:54:18 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:19 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:21 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:21 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:21 UTC] Singleton test failed
+[31-Jan-2026 14:54:21 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:22 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:24 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:24 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:24 UTC] Singleton test failed
+[31-Jan-2026 14:54:24 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:25 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:27 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:27 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:27 UTC] Singleton test failed
+[31-Jan-2026 14:54:27 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:28 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:30 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:30 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:30 UTC] Singleton test failed
+[31-Jan-2026 14:54:30 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:31 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:33 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:33 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:33 UTC] Singleton test failed
+[31-Jan-2026 14:54:33 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:34 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:36 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:36 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:36 UTC] Singleton test failed
+[31-Jan-2026 14:54:36 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:37 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:39 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:39 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:39 UTC] Singleton test failed
+[31-Jan-2026 14:54:39 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:40 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:42 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:42 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:42 UTC] Singleton test failed
+[31-Jan-2026 14:54:42 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:43 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:45 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:45 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:45 UTC] Singleton test failed
+[31-Jan-2026 14:54:45 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:46 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:48 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:48 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:48 UTC] Singleton test failed
+[31-Jan-2026 14:54:48 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:49 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:51 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:51 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:51 UTC] Singleton test failed
+[31-Jan-2026 14:54:51 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:52 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:54 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:54 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:54 UTC] Singleton test failed
+[31-Jan-2026 14:54:54 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:55 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:57 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:57 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:54:57 UTC] Singleton test failed
+[31-Jan-2026 14:54:57 UTC] Database connection attempt failed
+[31-Jan-2026 14:54:58 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:00 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:00 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:55:00 UTC] Singleton test failed
+[31-Jan-2026 14:55:00 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:01 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:03 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:03 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:55:03 UTC] Singleton test failed
+[31-Jan-2026 14:55:03 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:04 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:06 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:06 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:55:06 UTC] Singleton test failed
+[31-Jan-2026 14:55:06 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:07 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:09 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:09 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:55:09 UTC] Singleton test failed
+[31-Jan-2026 14:55:29 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:30 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:32 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:32 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:55:32 UTC] Database initialization failed during include
+[31-Jan-2026 14:55:32 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:33 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:35 UTC] Database connection attempt failed
+[31-Jan-2026 14:55:35 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:57:21 UTC] Database connection attempt failed
+[31-Jan-2026 14:57:22 UTC] Database connection attempt failed
+[31-Jan-2026 14:57:24 UTC] Database connection attempt failed
+[31-Jan-2026 14:57:24 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:57:24 UTC] Database initialization failed during include
+[31-Jan-2026 14:57:24 UTC] Database connection attempt failed
+[31-Jan-2026 14:57:25 UTC] Database connection attempt failed
+[31-Jan-2026 14:57:27 UTC] Database connection attempt failed
+[31-Jan-2026 14:57:27 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:58:24 UTC] Database connection attempt failed
+[31-Jan-2026 14:58:25 UTC] Database connection attempt failed
+[31-Jan-2026 14:58:27 UTC] Database connection attempt failed
+[31-Jan-2026 14:58:27 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:58:27 UTC] Database initialization failed during include
+[31-Jan-2026 14:58:27 UTC] Database connection attempt failed
+[31-Jan-2026 14:58:28 UTC] Database connection attempt failed
+[31-Jan-2026 14:58:30 UTC] Database connection attempt failed
+[31-Jan-2026 14:58:30 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:58:56 UTC] Database connection attempt failed
+[31-Jan-2026 14:58:57 UTC] Database connection attempt failed
+[31-Jan-2026 14:58:59 UTC] Database connection attempt failed
+[31-Jan-2026 14:58:59 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:58:59 UTC] Database initialization failed during include
+[31-Jan-2026 14:58:59 UTC] Database connection attempt failed
+[31-Jan-2026 14:59:00 UTC] Database connection attempt failed
+[31-Jan-2026 14:59:02 UTC] Database connection attempt failed
+[31-Jan-2026 14:59:02 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:59:20 UTC] Database connection attempt failed
+[31-Jan-2026 14:59:21 UTC] Database connection attempt failed
+[31-Jan-2026 14:59:23 UTC] Database connection attempt failed
+[31-Jan-2026 14:59:23 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 14:59:23 UTC] Database initialization failed during include
+[31-Jan-2026 14:59:23 UTC] Database connection attempt failed
+[31-Jan-2026 14:59:24 UTC] Database connection attempt failed
+[31-Jan-2026 14:59:26 UTC] Database connection attempt failed
+[31-Jan-2026 14:59:26 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:00:26 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:27 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:29 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:29 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:00:29 UTC] Database initialization failed during include
+[31-Jan-2026 15:00:29 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:30 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:32 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:32 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:00:32 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:33 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:35 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:35 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:00:35 UTC] Database initialization failed during include
+[31-Jan-2026 15:00:35 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:36 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:38 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:38 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:00:49 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:50 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:52 UTC] Database connection attempt failed
+[31-Jan-2026 15:00:52 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:00:52 UTC] Database initialization failed during include
+[31-Jan-2026 15:03:23 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:24 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:26 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:26 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:03:26 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:27 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:29 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:29 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:03:29 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:30 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:32 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:32 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:03:32 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:33 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:35 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:35 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:03:35 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:36 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:38 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:38 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:03:38 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:39 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:41 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:41 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:03:41 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:42 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:44 UTC] Database connection attempt failed
+[31-Jan-2026 15:03:44 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:05:57 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #1 ($password) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/config/jwt.php on line 343
+[31-Jan-2026 15:05:59 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #1 ($password) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/config/jwt.php on line 343
+[31-Jan-2026 15:06:01 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #1 ($password) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/config/jwt.php on line 343
+[31-Jan-2026 15:06:03 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #1 ($password) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/config/jwt.php on line 343
+[31-Jan-2026 15:06:05 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #1 ($password) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/config/jwt.php on line 343
+[31-Jan-2026 15:06:08 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #1 ($password) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/config/jwt.php on line 343
+[31-Jan-2026 15:06:09 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/vishwas/Desktop/Riya-Collection/htdocs/config/jwt.php on line 343
+[31-Jan-2026 15:08:00 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/vishwas/Desktop/Riya-Collection/htdocs/config/jwt.php on line 346
+[31-Jan-2026 15:10:10 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/PasswordHashCompatibilityPropertyTest.php on line 241
+[31-Jan-2026 15:15:28 UTC] Database connection attempt failed
+[31-Jan-2026 15:15:29 UTC] Database connection attempt failed
+[31-Jan-2026 15:15:31 UTC] Database connection attempt failed
+[31-Jan-2026 15:15:31 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:15:31 UTC] Database initialization failed during include
+[31-Jan-2026 15:15:31 UTC] PHP Fatal error:  Cannot redeclare function getInputValidator() (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/InputValidator.php:130) in /home/vishwas/Desktop/Riya-Collection/htdocs/config/security.php on line 499
+[31-Jan-2026 15:16:10 UTC] Database connection attempt failed
+[31-Jan-2026 15:16:11 UTC] Database connection attempt failed
+[31-Jan-2026 15:16:13 UTC] Database connection attempt failed
+[31-Jan-2026 15:16:13 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:16:13 UTC] Database initialization failed during include
+[31-Jan-2026 15:16:13 UTC] PHP Fatal error:  Cannot redeclare class InputValidator (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/InputValidator.php:11) in /home/vishwas/Desktop/Riya-Collection/htdocs/config/security.php on line 228
+[31-Jan-2026 15:17:26 UTC] Database connection attempt failed
+[31-Jan-2026 15:17:27 UTC] Database connection attempt failed
+[31-Jan-2026 15:17:29 UTC] Database connection attempt failed
+[31-Jan-2026 15:17:29 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:17:29 UTC] Database initialization failed during include
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 42
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 51
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 52
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 53
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 82
+[31-Jan-2026 15:17:29 UTC] API error response
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 138
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 288
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Undefined array key "REQUEST_URI" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 289
+[31-Jan-2026 15:17:29 UTC] PHP Warning:  Undefined array key "REQUEST_URI" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 321
+[31-Jan-2026 15:17:29 UTC] PHP Deprecated:  parse_url(): Passing null to parameter #1 ($url) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 322
+[31-Jan-2026 15:17:29 UTC] Router exception
+[31-Jan-2026 15:17:29 UTC] API error response
+[31-Jan-2026 15:17:29 UTC] PHP Fatal error:  Uncaught Error: Class "PHPUnit\Framework\TestCase" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ApiEndpointCompletenessPropertyTest.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ApiEndpointCompletenessPropertyTest.php on line 18
+[31-Jan-2026 15:18:42 UTC] Database connection attempt failed
+[31-Jan-2026 15:18:43 UTC] Database connection attempt failed
+[31-Jan-2026 15:18:45 UTC] Database connection attempt failed
+[31-Jan-2026 15:18:45 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:18:45 UTC] Database initialization failed during include
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 42
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 51
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 48
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 52
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php:42) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 53
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 82
+[31-Jan-2026 15:18:45 UTC] API error response
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 138
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 288
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Undefined array key "REQUEST_URI" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 289
+[31-Jan-2026 15:18:45 UTC] PHP Warning:  Undefined array key "REQUEST_URI" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 321
+[31-Jan-2026 15:18:45 UTC] PHP Deprecated:  parse_url(): Passing null to parameter #1 ($url) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 322
+[31-Jan-2026 15:18:45 UTC] Router exception
+[31-Jan-2026 15:18:45 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:21:08 UTC] API error response
+[31-Jan-2026 15:28:12 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Order.php(13): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/controllers/OrderController.php(13): require_once('...')
+#7 /home/vishwas/Desktop/Riya-Collection/htdocs/test_order_controller_simple.php(9): require_once('...')
+#8 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 15:28:30 UTC] Database connection attempt failed
+[31-Jan-2026 15:28:31 UTC] Database connection attempt failed
+[31-Jan-2026 15:28:33 UTC] Database connection attempt failed
+[31-Jan-2026 15:28:33 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:28:33 UTC] Database initialization failed during include
+[31-Jan-2026 15:28:33 UTC] Database connection attempt failed
+[31-Jan-2026 15:28:34 UTC] Database connection attempt failed
+[31-Jan-2026 15:28:36 UTC] Database connection attempt failed
+[31-Jan-2026 15:28:36 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:37:31 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/services/PaymentService.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/test_payment_system.php(13): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 15:37:47 UTC] Database connection attempt failed
+[31-Jan-2026 15:37:48 UTC] Database connection attempt failed
+[31-Jan-2026 15:37:50 UTC] Database connection attempt failed
+[31-Jan-2026 15:37:50 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:37:50 UTC] Database initialization failed during include
+[31-Jan-2026 15:37:50 UTC] Database connection attempt failed
+[31-Jan-2026 15:37:51 UTC] Database connection attempt failed
+[31-Jan-2026 15:37:53 UTC] Database connection attempt failed
+[31-Jan-2026 15:37:53 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:40:08 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:09 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:11 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:11 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:40:11 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:12 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:14 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:14 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:40:14 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:15 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:17 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:17 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:40:17 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:18 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:20 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:20 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:40:20 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:21 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:23 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:23 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:40:23 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:24 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:26 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:26 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:40:26 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:27 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:29 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:29 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:40:29 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:30 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:32 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:32 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:40:32 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:33 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:35 UTC] Database connection attempt failed
+[31-Jan-2026 15:40:35 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:47:23 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/services/AuthService.php(13): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/controllers/AuthController.php(11): require_once('...')
+#7 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/UserAuthenticationFlowsTest.php(13): require_once('...')
+#8 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 15:52:27 UTC] Database connection attempt failed
+[31-Jan-2026 15:52:28 UTC] Database connection attempt failed
+[31-Jan-2026 15:52:30 UTC] Database connection attempt failed
+[31-Jan-2026 15:52:30 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 15:52:30 UTC] PHP Fatal error:  Uncaught Exception: Failed to establish database connection after 3 attempts in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:158
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(29): Database::getInstance()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Product.php(24): DatabaseModel->__construct()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ProductCRUDPropertyTest.php(50): Product->__construct()
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ProductCRUDPropertyTest.php(627): ProductCRUDPropertyTest->setUp()
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ProductCRUDPropertyTest.php(655): ProductCRUDPropertyTest->runAllTests()
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 158
+[31-Jan-2026 16:04:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function imagecreate() in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/FileUploadValidationPropertyTest.php:480
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/FileUploadValidationPropertyTest.php(59): FileUploadValidationPropertyTest->createTestImageFile()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/FileUploadValidationPropertyTest.php(827): FileUploadValidationPropertyTest->testFileSizeValidationConsistency()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/FileUploadValidationPropertyTest.php(853): FileUploadValidationPropertyTest->runAllTests()
+#3 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/FileUploadValidationPropertyTest.php on line 480
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 205 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 1047968 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242203 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242610 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 869 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 1297143 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 103259 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 103360 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 808 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 1048948 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 102802 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 1096 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 344 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 1034 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 1981 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 1047617 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 2748949 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242384 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 1421 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 2637753 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 973 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242498 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 1048940 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242079 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 102383 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 2244205 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 228 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 103354 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 102689 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:06 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242126 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 101729 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242858 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:06:07 UTC] PHP Warning:  getimagesize(): Corrupt JPEG data: 5242466 extraneous bytes before marker in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ImageService.php on line 161
+[31-Jan-2026 16:06:07 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:08:28 UTC] Image upload failed
+[31-Jan-2026 16:14:19 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Order.php(13): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/OrderWorkflowCompletenessPropertyTest.php(19): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 16:18:56 UTC] Database connection attempt failed
+[31-Jan-2026 16:18:57 UTC] Database connection attempt failed
+[31-Jan-2026 16:18:59 UTC] Database connection attempt failed
+[31-Jan-2026 16:18:59 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 16:18:59 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:00 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:02 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:02 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 16:19:02 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:03 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:05 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:05 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 16:19:05 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:06 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:08 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:08 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 16:19:08 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:09 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:11 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:11 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 16:19:11 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:12 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:14 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:14 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 16:19:14 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:15 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:17 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:17 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 16:19:17 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:18 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:20 UTC] Database connection attempt failed
+[31-Jan-2026 16:19:20 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 16:21:13 UTC] Database connection attempt failed
+[31-Jan-2026 16:21:14 UTC] Database connection attempt failed
+[31-Jan-2026 16:21:16 UTC] Database connection attempt failed
+[31-Jan-2026 16:21:16 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 16:25:04 UTC] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected token "private" in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/PaymentSignatureVerificationPropertyTest.php:399
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Util/FileLoader.php(49): PHPUnit\Util\FileLoader::load()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Runner/StandardTestSuiteLoader.php(43): PHPUnit\Util\FileLoader::checkAndLoad()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(146): PHPUnit\Runner\StandardTestSuiteLoader->load()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(111): PHPUnit\Runner\BaseTestRunner->loadSuiteClass()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php(121): PHPUnit\Runner\BaseTestRunner->getTest()
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php(99): PHPUnit\TextUI\Command->run()
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#7 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/bin/phpunit(122): include('...')
+#8 {main}
+
+Next PHPUnit\TextUI\RuntimeException: syntax error, unexpected token "private" in /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php:101
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/bin/phpunit(122): include('...')
+#2 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php on line 101
+[31-Jan-2026 17:02:55 UTC] PHP Parse error:  Unmatched '}' in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/Logger.php on line 496
+[31-Jan-2026 17:04:24 UTC] PHP Fatal error:  Cannot redeclare function getEmailConfig() (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php:160) in /home/vishwas/Desktop/Riya-Collection/htdocs/services/EmailService.php on line 19
+[31-Jan-2026 17:04:50 UTC] PHP Fatal error:  Cannot redeclare class EmailService (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/services/EmailService.php:16) in /home/vishwas/Desktop/Riya-Collection/htdocs/config/email.php on line 264
+[31-Jan-2026 17:06:13 UTC] Database connection attempt failed
+[31-Jan-2026 17:06:14 UTC] Database connection attempt failed
+[31-Jan-2026 17:06:16 UTC] Database connection attempt failed
+[31-Jan-2026 17:06:16 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alnum(): Argument of type int will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 511
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alnum(): Argument of type int will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 511
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alnum(): Argument of type int will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 511
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alpha(): Argument of type int will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 499
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alpha(): Argument of type int will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 499
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alpha(): Argument of type int will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 499
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alnum(): Argument of type bool will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 511
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alnum(): Argument of type bool will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 511
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alnum(): Argument of type bool will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 511
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alpha(): Argument of type null will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 499
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alpha(): Argument of type null will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 499
+[31-Jan-2026 17:19:30 UTC] PHP Deprecated:  ctype_alpha(): Argument of type null will be interpreted as string in the future in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 499
+[31-Jan-2026 17:24:33 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:34 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:36 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:36 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:24:36 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:37 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:39 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:39 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:24:39 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:40 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:42 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:42 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:24:42 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:43 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:45 UTC] Database connection attempt failed
+[31-Jan-2026 17:24:45 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:34:14 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:15 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:17 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:17 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:34:17 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:18 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:20 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:20 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:34:20 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:21 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:23 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:23 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:34:23 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:24 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:26 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:26 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:34:26 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:27 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:29 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:29 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:34:29 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:30 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:32 UTC] Database connection attempt failed
+[31-Jan-2026 17:34:32 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:36:09 UTC] PHP Fatal error:  Illegal offset type in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/HealthCheckAccuracyPropertyTest.php on line 321
+[31-Jan-2026 17:36:29 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:30 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:32 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:32 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:36:32 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:33 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:35 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:35 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:36:35 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:36 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:38 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:38 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:36:38 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:39 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:41 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:41 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:36:41 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:42 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:44 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:44 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:36:44 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:45 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:47 UTC] Database connection attempt failed
+[31-Jan-2026 17:36:47 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:12 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 0
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 1
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 2
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 3
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 4
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 5
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 6
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 7
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 8
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 9
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 10
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 11
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 12
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 13
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 14
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 15
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 16
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 17
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 18
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 19
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 20
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 21
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 22
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 23
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 24
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 25
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 26
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 27
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 28
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] Test log message for iteration 29
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:41:37 UTC] API error response
+[31-Jan-2026 17:50:21 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/services/PollingService.php(12): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/test_polling_system.php(9): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 17:50:39 UTC] Database connection attempt failed
+[31-Jan-2026 17:50:40 UTC] Database connection attempt failed
+[31-Jan-2026 17:50:42 UTC] Database connection attempt failed
+[31-Jan-2026 17:50:42 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:50:42 UTC] Database initialization failed during include
+[31-Jan-2026 17:50:42 UTC] Database connection attempt failed
+[31-Jan-2026 17:50:43 UTC] Database connection attempt failed
+[31-Jan-2026 17:50:45 UTC] Database connection attempt failed
+[31-Jan-2026 17:50:45 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:52:24 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:25 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:27 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:27 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:52:27 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:28 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:30 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:30 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:52:30 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:31 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:33 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:33 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:52:33 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:34 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:36 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:36 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:52:36 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:37 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:39 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:39 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 17:52:39 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:40 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:42 UTC] Database connection attempt failed
+[31-Jan-2026 17:52:42 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 18:00:48 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:180
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(141): Database->handleConnectionError()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(73): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(83): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(997): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/services/BackupService.php(3): require_once('...')
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/test_backup_system.php(9): require_once('...')
+#7 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 180
+[31-Jan-2026 18:01:45 UTC] Database connection attempt failed
+[31-Jan-2026 18:01:46 UTC] Database connection attempt failed
+[31-Jan-2026 18:01:48 UTC] Database connection attempt failed
+[31-Jan-2026 18:01:48 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 18:01:48 UTC] Database initialization failed during include
+[31-Jan-2026 18:01:48 UTC] Database connection attempt failed
+[31-Jan-2026 18:01:49 UTC] Database connection attempt failed
+[31-Jan-2026 18:01:51 UTC] Database connection attempt failed
+[31-Jan-2026 18:01:51 UTC] Failed to establish database connection after 3 attempts
+[31-Jan-2026 18:02:51 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 294
+[31-Jan-2026 18:02:51 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 295
+[31-Jan-2026 18:02:51 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 296
+[31-Jan-2026 18:02:51 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 297
