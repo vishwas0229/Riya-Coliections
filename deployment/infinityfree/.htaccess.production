@@ -1,5 +1,5 @@
-# Riya Collections PHP Backend - Production .htaccess for InfinityFree
-# Optimized for InfinityFree hosting environment
+# Riya Collections - Production .htaccess for InfinityFree
+# Optimized for InfinityFree hosting environment with unified structure
 
 # Enable URL Rewriting
 RewriteEngine On
@@ -57,29 +57,26 @@ RewriteEngine On
     Deny from all
 </Files>
 
-<Files "phpunit.xml">
-    Order allow,deny
-    Deny from all
-</Files>
-
-# Protect directories
+# Protect directories (unified structure)
 <IfModule mod_rewrite.c>
-    RewriteRule ^(config|logs|tests|vendor|migrations|deployment)/ - [F,L]
+    RewriteRule ^(app|storage|database|tests|vendor|deployment|docs)/ - [F,L]
 </IfModule>
 
-# API Routing - Route all API requests to index.php
+# Unified Routing - Handle all requests through index.php
 <IfModule mod_rewrite.c>
-    # Handle API routes
+    # API routes
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} ^/api/
     RewriteRule ^(.*)$ index.php [QSA,L]
     
-    # Handle other routes (if needed for frontend)
+    # Frontend SPA routes (exclude assets and uploads)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} !^/api/
+    RewriteCond %{REQUEST_URI} !^/assets/
     RewriteCond %{REQUEST_URI} !^/uploads/
+    RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$
     RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
 
@@ -125,6 +122,13 @@ RewriteEngine On
     ExpiresByType image/x-icon "access plus 1 year"
 </IfModule>
 
+# Add Cache-Control headers
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+        Header append Cache-Control "public, immutable"
+    </FilesMatch>
+</IfModule>
+
 # Compression (if supported by InfinityFree)
 <IfModule mod_deflate.c>
     # Compress HTML, CSS, JavaScript, Text, XML and fonts
@@ -163,10 +167,10 @@ RewriteEngine On
     php_value post_max_size 2M
     php_value max_execution_time 30
     php_value max_input_time 30
-    php_value memory_limit 128M
+    php_value memory_limit 64M
 </IfModule>
 
-# Prevent access to backup files
+# Prevent access to backup and temporary files
 <FilesMatch "\.(bak|backup|old|orig|save|swp|tmp)$">
     Order allow,deny
     Deny from all
@@ -196,17 +200,7 @@ RewriteEngine On
     RewriteRule .* - [F]
 </IfModule>
 
-# Rate Limiting (Basic protection)
-<IfModule mod_evasive24.c>
-    DOSHashTableSize    2048
-    DOSPageCount        10
-    DOSSiteCount        50
-    DOSPageInterval     1
-    DOSSiteInterval     1
-    DOSBlockingPeriod   600
-</IfModule>
-
-# Custom Error Pages
+# Custom Error Pages (if error.php exists)
 ErrorDocument 400 /error.php?code=400
 ErrorDocument 401 /error.php?code=401
 ErrorDocument 403 /error.php?code=403
