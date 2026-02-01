@@ -961,6 +961,26 @@ class EnhancedRouter {
             'middleware' => []
         ];
         
+        // API testing utilities
+        $this->routes['GET']['/api/test'] = [
+            'handler' => ['ApiController', 'testInterface'],
+            'middleware' => []
+        ];
+        $this->routes['POST']['/api/validate'] = [
+            'handler' => ['ApiController', 'validateRequest'],
+            'middleware' => []
+        ];
+        $this->routes['POST']['/api/test/execute'] = [
+            'handler' => ['ApiController', 'executeTest'],
+            'middleware' => []
+        ];
+        
+        // Postman collection download
+        $this->routes['GET']['/api/postman-collection'] = [
+            'handler' => ['ApiController', 'postmanCollection'],
+            'middleware' => []
+        ];
+        
         // Backup and recovery routes (admin only)
         $this->routes['GET']['/api/admin/backup/list'] = [
             'handler' => ['BackupController', 'handleRequest'],

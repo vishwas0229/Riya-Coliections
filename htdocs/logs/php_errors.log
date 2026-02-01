@@ -2881,3 +2881,1016 @@ Stack trace:
 [31-Jan-2026 18:02:51 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 295
 [31-Jan-2026 18:02:51 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 296
 [31-Jan-2026 18:02:51 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 297
+[31-Jan-2026 18:40:25 UTC] PHP Fatal error:  Uncaught Error: Class "Logger" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/config/ConfigManager.php:93
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/ConfigManager.php(41): ConfigManager->loadConfiguration()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/ConfigManager.php(50): ConfigManager->__construct()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php(97): ConfigManager::getInstance()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php(226): config()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php(362): getUploadConfig()
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php(377): configurePHP()
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/config/ConfigManager.php(15): require_once('...')
+#7 /home/vishwas/Desktop/Riya-Collection/htdocs/scripts/config_manager.php(31): require_once('...')
+#8 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/ConfigManager.php on line 93
+[31-Jan-2026 18:42:08 UTC] [CONFIG info] Configuration loaded from cache
+[31-Jan-2026 18:42:08 UTC] PHP Warning:  Undefined array key "max_file_size" in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 363
+[31-Jan-2026 18:42:08 UTC] PHP Warning:  Undefined array key "max_file_size" in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 364
+[31-Jan-2026 18:42:08 UTC] Configuration validation failed
+[31-Jan-2026 18:42:26 UTC] [CONFIG info] Configuration loaded successfully {"environment":"development","config_sections":["app","database","security","email","payment","features","business","api","logging","upload"]}
+[31-Jan-2026 18:42:35 UTC] [CONFIG info] Configuration loaded from cache
+[31-Jan-2026 18:42:35 UTC] Failed to list credential keys
+[31-Jan-2026 18:42:43 UTC] [CONFIG info] Configuration loaded from cache
+[31-Jan-2026 18:42:51 UTC] [CONFIG info] Configuration loaded from cache
+[31-Jan-2026 18:44:52 UTC] PHP Fatal error:  Cannot redeclare function getRateLimiter() (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/config/security.php:322) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/RateLimiter.php on line 416
+[31-Jan-2026 21:41:57 UTC] PHP Fatal error:  Uncaught TypeError: Attribute value must be of type int for selected attribute, string given in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:121
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(121): PDO->__construct()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(76): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(86): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(1000): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/deployment/scripts/health_check.php(119): require_once('...')
+#6 {main}
+
+Next TypeError: Attribute value must be of type int for selected attribute, string given in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:121
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(121): PDO->__construct()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(76): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(86): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(1000): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/models/Database.php(12): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/deployment/scripts/health_check.php(119): require_once('...')
+#6 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 121
+[31-Jan-2026 21:47:33 UTC] [CONFIG info] Configuration loaded from cache
+[31-Jan-2026 21:50:50 UTC] PHP Fatal error:  Cannot redeclare function checkRateLimit() (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/config/security.php:350) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/RateLimiter.php on line 426
+[31-Jan-2026 21:51:26 UTC] PHP Fatal error:  Cannot redeclare class RateLimiter (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/config/security.php:75) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/RateLimiter.php on line 13
+[31-Jan-2026 21:52:16 UTC] PHP Fatal error:  Cannot redeclare function sanitizeInput() (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/config/security.php:354) in /home/vishwas/Desktop/Riya-Collection/htdocs/services/ValidationService.php on line 912
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 32
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 33
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 36
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 39
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 42
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 54
+[31-Jan-2026 21:52:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 55
+[31-Jan-2026 21:52:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method SecurityRateLimiter::isBlocked() in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php:74
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php(28): SecurityMiddleware::checkRateLimit()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/index.php(269): SecurityMiddleware::handle()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/index.php(59): EnhancedRouter->applyMiddleware()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/ApiEndpointCompletenessPropertyTest.php(12): require_once('...')
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Util/FileLoader.php(66): include_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Util/FileLoader.php(49): PHPUnit\Util\FileLoader::load()
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Framework/TestSuite.php(398): PHPUnit\Util\FileLoader::checkAndLoad()
+#7 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Framework/TestSuite.php(537): PHPUnit\Framework\TestSuite->addTestFile()
+#8 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/TestSuiteMapper.php(67): PHPUnit\Framework\TestSuite->addTestFiles()
+#9 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php(391): PHPUnit\TextUI\TestSuiteMapper->map()
+#10 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php(114): PHPUnit\TextUI\Command->handleArguments()
+#11 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php(99): PHPUnit\TextUI\Command->run()
+#12 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#13 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/bin/phpunit(122): include('...')
+#14 {main}
+
+Next PHPUnit\TextUI\RuntimeException: Call to undefined method SecurityRateLimiter::isBlocked() in /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php:101
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/bin/phpunit(122): include('...')
+#2 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php on line 101
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 32
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 33
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 36
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 39
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 42
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 54
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/tests/bootstrap.php:164) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 55
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 110
+[31-Jan-2026 21:53:27 UTC] API error response
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 166
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 288
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Undefined array key "REQUEST_URI" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 289
+[31-Jan-2026 21:53:27 UTC] PHP Warning:  Undefined array key "REQUEST_URI" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 321
+[31-Jan-2026 21:53:27 UTC] PHP Deprecated:  parse_url(): Passing null to parameter #1 ($url) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 322
+[31-Jan-2026 21:53:27 UTC] Router exception
+[31-Jan-2026 21:53:27 UTC] API error response
+[31-Jan-2026 21:53:27 UTC] PHP Fatal error:  Cannot redeclare class ValidationException (previously declared in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php:193) in /home/vishwas/Desktop/Riya-Collection/htdocs/utils/ErrorHandler.php on line 542
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:09 UTC] API error response
+[31-Jan-2026 21:54:48 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 356
+[31-Jan-2026 21:54:48 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 357
+[31-Jan-2026 21:54:48 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 358
+[31-Jan-2026 21:54:48 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 359
+[31-Jan-2026 21:54:48 UTC] PHP Fatal error:  Uncaught TypeError: Attribute value must be of type int for selected attribute, string given in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:121
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(121): PDO->__construct()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(76): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(86): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(1000): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/DatabaseConnectionSecurityPropertyTest.php(18): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/run_property_tests.php(56): include('...')
+#6 {main}
+
+Next TypeError: Attribute value must be of type int for selected attribute, string given in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:121
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(121): PDO->__construct()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(76): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(86): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(1000): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/DatabaseConnectionSecurityPropertyTest.php(18): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/run_property_tests.php(56): include('...')
+#6 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 121
+[31-Jan-2026 21:55:45 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 356
+[31-Jan-2026 21:55:45 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 357
+[31-Jan-2026 21:55:45 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 358
+[31-Jan-2026 21:55:45 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 359
+[31-Jan-2026 21:55:45 UTC] PHP Fatal error:  Uncaught TypeError: Attribute value must be of type int for selected attribute, string given in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:120
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(120): PDO->__construct()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(76): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(86): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(999): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/DatabaseConnectionSecurityPropertyTest.php(18): require_once('...')
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/run_property_tests.php(56): include('...')
+#6 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 120
+[31-Jan-2026 21:56:11 UTC] PHP Fatal error:  Uncaught ValueError: Error mode must be one of the PDO::ERRMODE_* constants in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php:119
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(119): PDO->__construct()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(75): Database->establishConnection()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(85): Database->__construct()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php(998): Database::getInstance()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/tests/DatabaseConnectionSecurityPropertyTest.php(18): require_once('...')
+#5 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/config/database.php on line 119
+[31-Jan-2026 21:56:21 UTC] PHP Fatal error:  Uncaught Error: Class "PHPUnit\Framework\TestCase" not found in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/AuthTokenCompatibilityPropertyTest.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/tests/AuthTokenCompatibilityPropertyTest.php on line 19
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 356
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 357
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 358
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  ini_set(): Session ini settings cannot be changed after headers have already been sent in /home/vishwas/Desktop/Riya-Collection/htdocs/config/environment.php on line 359
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 32
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 33
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 36
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 39
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 42
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/CorsMiddleware.php on line 51
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 50
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 54
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vishwas/Desktop/Riya-Collection/htdocs/run_standalone_property_tests.php:7) in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 55
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 110
+[31-Jan-2026 21:57:11 UTC] API error response
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/middleware/SecurityMiddleware.php on line 166
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Undefined array key "REQUEST_METHOD" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 288
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Undefined array key "REQUEST_URI" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 289
+[31-Jan-2026 21:57:11 UTC] PHP Warning:  Undefined array key "REQUEST_URI" in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 321
+[31-Jan-2026 21:57:11 UTC] PHP Deprecated:  parse_url(): Passing null to parameter #1 ($url) of type string is deprecated in /home/vishwas/Desktop/Riya-Collection/htdocs/index.php on line 322
+[31-Jan-2026 21:57:11 UTC] Router exception
+[31-Jan-2026 21:57:11 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:35 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:57:45 UTC] API error response
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 21:58:12 UTC] Image upload failed
+[31-Jan-2026 22:11:32 UTC] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected token "private", expecting end of file in /home/vishwas/Desktop/Riya-Collection/htdocs/controllers/ApiController.php:749
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Util/FileLoader.php(66): include_once()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Util/FileLoader.php(49): PHPUnit\Util\FileLoader::load()
+#2 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Runner/StandardTestSuiteLoader.php(43): PHPUnit\Util\FileLoader::checkAndLoad()
+#3 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(146): PHPUnit\Runner\StandardTestSuiteLoader->load()
+#4 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(111): PHPUnit\Runner\BaseTestRunner->loadSuiteClass()
+#5 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php(121): PHPUnit\Runner\BaseTestRunner->getTest()
+#6 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php(99): PHPUnit\TextUI\Command->run()
+#7 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#8 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/bin/phpunit(122): include('...')
+#9 {main}
+
+Next PHPUnit\TextUI\RuntimeException: syntax error, unexpected token "private", expecting end of file in /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php:101
+Stack trace:
+#0 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/phpunit(107): PHPUnit\TextUI\Command::main()
+#1 /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/bin/phpunit(122): include('...')
+#2 {main}
+  thrown in /home/vishwas/Desktop/Riya-Collection/htdocs/vendor/phpunit/phpunit/src/TextUI/Command.php on line 101

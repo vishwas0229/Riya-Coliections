@@ -1,0 +1,52 @@
+[2026-02-01 03:17:16] Starting deployment to production environment
+[2026-02-01 03:17:16] Project root: /home/vishwas/Desktop/Riya-Collection/htdocs
+[2026-02-01 03:17:16] Options: backup=false, skip-db=false, tests=false, dry-run=true
+[2026-02-01 03:17:16] Running pre-deployment checks...
+[SUCCESS] Pre-deployment checks passed
+[2026-02-01 03:17:16] Deploying to production environment...
+[2026-02-01 03:17:16] Production deployment configuration
+[2026-02-01 03:17:16] [DRY RUN] Would copy environment configuration from /home/vishwas/Desktop/Riya-Collection/htdocs/deployment/scripts/../templates/.env.production
+[2026-02-01 03:17:16] [DRY RUN] Would copy .htaccess from /home/vishwas/Desktop/Riya-Collection/htdocs/deployment/scripts/../templates/.htaccess.template
+[2026-02-01 03:17:16] Setting file permissions...
+[2026-02-01 03:17:16] [DRY RUN] Would set file permissions
+[2026-02-01 03:17:16] Database migration would be performed here
+[2026-02-01 03:17:16] [DRY RUN] Would run database migration
+[2026-02-01 03:17:16] Running post-deployment tasks...
+[2026-02-01 03:17:16] [DRY RUN] Would run post-deployment tasks
+[2026-02-01 03:17:16] Deployment verification...
+[2026-02-01 03:17:16] [DRY RUN] Would verify deployment
+[2026-02-01 03:17:16] Deployment Summary:
+[2026-02-01 03:17:16] Environment: production
+[2026-02-01 03:17:16] Backup created: false
+[2026-02-01 03:17:16] Database migration: required
+[2026-02-01 03:17:16] Tests run: false
+[SUCCESS] Dry run completed successfully
+[2026-02-01 03:17:16] No actual changes were made. Run without --dry-run to deploy.
+[2026-02-01 03:17:16] Deployment process completed
+[2026-02-01 03:17:25] Starting deployment to infinityfree environment
+[2026-02-01 03:17:25] Project root: /home/vishwas/Desktop/Riya-Collection/htdocs
+[2026-02-01 03:17:25] Options: backup=true, skip-db=false, tests=false, dry-run=true
+[2026-02-01 03:17:25] Running pre-deployment checks...
+[SUCCESS] Pre-deployment checks passed
+[2026-02-01 03:17:25] Creating pre-deployment backup...
+[2026-02-01 03:17:25] [DRY RUN] Would create backup
+[2026-02-01 03:17:25] Deploying to infinityfree environment...
+[2026-02-01 03:17:25] InfinityFree deployment configuration
+[2026-02-01 03:17:25] [DRY RUN] Would copy environment configuration from /home/vishwas/Desktop/Riya-Collection/htdocs/deployment/scripts/../infinityfree/.env.infinityfree
+[2026-02-01 03:17:25] [DRY RUN] Would copy .htaccess from /home/vishwas/Desktop/Riya-Collection/htdocs/deployment/scripts/../infinityfree/.htaccess.production
+[2026-02-01 03:17:25] Setting file permissions...
+[2026-02-01 03:17:25] [DRY RUN] Would set file permissions
+[2026-02-01 03:17:25] Database migration would be performed here
+[2026-02-01 03:17:25] [DRY RUN] Would run database migration
+[2026-02-01 03:17:25] Running post-deployment tasks...
+[2026-02-01 03:17:25] [DRY RUN] Would run post-deployment tasks
+[2026-02-01 03:17:25] Deployment verification...
+[2026-02-01 03:17:25] [DRY RUN] Would verify deployment
+[2026-02-01 03:17:25] Deployment Summary:
+[2026-02-01 03:17:25] Environment: infinityfree
+[2026-02-01 03:17:25] Backup created: true
+[2026-02-01 03:17:25] Database migration: required
+[2026-02-01 03:17:25] Tests run: false
+[SUCCESS] Dry run completed successfully
+[2026-02-01 03:17:25] No actual changes were made. Run without --dry-run to deploy.
+[2026-02-01 03:17:25] Deployment process completed

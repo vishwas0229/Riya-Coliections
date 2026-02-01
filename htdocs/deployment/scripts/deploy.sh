@@ -9,7 +9,7 @@ set -e  # Exit on any error
 
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 DEPLOYMENT_DIR="$SCRIPT_DIR/.."
 BACKUP_DIR="$PROJECT_ROOT/backups"
 LOG_FILE="$PROJECT_ROOT/logs/deployment.log"

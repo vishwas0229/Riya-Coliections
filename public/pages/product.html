@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Riya Collections</title>
+    <meta name="description" content="View detailed information about our premium cosmetic products including images, specifications, and customer reviews.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="../src/css/main.css" as="style">
+    <link rel="preload" href="../src/css/product-detail.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/product-detail.css">
+    
+    <!-- Font preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <img src="../assets/logo.svg" alt="Riya Collections" class="nav__logo">
+                <span class="nav__title">Riya Collections</span>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="../index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#categories" class="nav__link">Categories</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="products.html" class="nav__link">Products</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            
+            <div class="nav__actions">
+                <button class="nav__search-btn" id="search-btn" aria-label="Search products">
+                    <i class="ri-search-line"></i>
+                </button>
+                
+                <a href="cart.html" class="nav__cart" aria-label="Shopping cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="nav__cart-count" id="cart-count">0</span>
+                </a>
+                
+                <div class="nav__user">
+                    <button class="nav__user-btn" id="user-btn" aria-label="User account">
+                        <i class="ri-user-line"></i>
+                    </button>
+                    <div class="nav__user-menu" id="user-menu">
+                        <a href="login.html" class="nav__user-link">Login</a>
+                        <a href="register.html" class="nav__user-link">Register</a>
+                        <a href="profile.html" class="nav__user-link">Profile</a>
+                        <a href="orders.html" class="nav__user-link">Orders</a>
+                    </div>
+                </div>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Search Overlay -->
+        <div class="search__overlay" id="search-overlay">
+            <div class="search__container">
+                <form class="search__form" id="search-form">
+                    <input type="text" class="search__input" id="search-input" placeholder="Search for products, brands, categories...">
+                    <button type="submit" class="search__btn">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </form>
+                <button class="search__close" id="search-close">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="search__results" id="search-results"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Loading State -->
+        <div class="product-loading" id="product-loading">
+            <div class="container">
+                <div class="loading-content">
+                    <div class="loading-spinner"></div>
+                    <p>Loading product details...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div class="product-error" id="product-error" style="display: none;">
+            <div class="container">
+                <div class="error-content">
+                    <div class="error-icon">
+                        <i class="ri-error-warning-line"></i>
+                    </div>
+                    <h2>Product Not Found</h2>
+                    <p id="error-message">The product you're looking for doesn't exist or has been removed.</p>
+                    <div class="error-actions">
+                        <a href="products.html" class="btn btn--primary">Browse Products</a>
+                        <button class="btn btn--outline" onclick="window.location.reload()">Try Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Detail Content -->
+        <div class="product-detail" id="product-detail" style="display: none;">
+            <!-- Breadcrumb -->
+            <section class="breadcrumb-section">
+                <div class="container">
+                    <nav class="breadcrumb" id="breadcrumb">
+                        <a href="../index.html" class="breadcrumb__link">Home</a>
+                        <span class="breadcrumb__separator">/</span>
+                        <a href="products.html" class="breadcrumb__link">Products</a>
+                        <span class="breadcrumb__separator">/</span>
+                        <span class="breadcrumb__category" id="breadcrumb-category">Category</span>
+                        <span class="breadcrumb__separator">/</span>
+                        <span class="breadcrumb__current" id="breadcrumb-product">Product</span>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- Product Main Section -->
+            <section class="product-main">
+                <div class="container">
+                    <div class="product-layout">
+                        <!-- Product Images -->
+                        <div class="product-images">
+                            <div class="product-gallery">
+                                <!-- Main Image -->
+                                <div class="gallery-main">
+                                    <div class="main-image-container">
+                                        <img src="" alt="" class="main-image" id="main-image">
+                                        <button class="zoom-btn" id="zoom-btn" aria-label="Zoom image">
+                                            <i class="ri-zoom-in-line"></i>
+                                        </button>
+                                        <div class="image-badges" id="image-badges">
+                                            <!-- Badges will be added dynamically -->
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Thumbnail Gallery -->
+                                <div class="gallery-thumbnails">
+                                    <div class="thumbnails-container" id="thumbnails-container">
+                                        <!-- Thumbnails will be added dynamically -->
+                                    </div>
+                                    <button class="thumbnail-nav thumbnail-prev" id="thumbnail-prev" aria-label="Previous images">
+                                        <i class="ri-arrow-left-s-line"></i>
+                                    </button>
+                                    <button class="thumbnail-nav thumbnail-next" id="thumbnail-next" aria-label="Next images">
+                                        <i class="ri-arrow-right-s-line"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Information -->
+                        <div class="product-info">
+                            <div class="product-header">
+                                <div class="product-brand" id="product-brand"></div>
+                                <h1 class="product-title" id="product-title"></h1>
+                                <div class="product-sku">
+                                    SKU: <span id="product-sku"></span>
+                                </div>
+                            </div>
+
+                            <div class="product-rating" id="product-rating" style="display: none;">
+                                <div class="rating-stars" id="rating-stars"></div>
+                                <span class="rating-text" id="rating-text"></span>
+                                <a href="#reviews" class="rating-link" id="rating-link"></a>
+                            </div>
+
+                            <div class="product-price">
+                                <div class="price-main">
+                                    <span class="current-price" id="current-price"></span>
+                                    <span class="original-price" id="original-price" style="display: none;"></span>
+                                </div>
+                                <div class="price-discount" id="price-discount" style="display: none;">
+                                    <span class="discount-badge"></span>
+                                    <span class="savings-text"></span>
+                                </div>
+                            </div>
+
+                            <div class="product-stock">
+                                <div class="stock-info" id="stock-info">
+                                    <span class="stock-status" id="stock-status"></span>
+                                    <span class="stock-quantity" id="stock-quantity"></span>
+                                </div>
+                                <div class="stock-indicator" id="stock-indicator">
+                                    <div class="stock-bar">
+                                        <div class="stock-fill" id="stock-fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-description">
+                                <p id="product-description"></p>
+                            </div>
+
+                            <!-- Add to Cart Section -->
+                            <div class="product-actions">
+                                <div class="quantity-selector">
+                                    <label for="quantity-input" class="quantity-label">Quantity:</label>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn quantity-decrease" id="quantity-decrease" aria-label="Decrease quantity">
+                                            <i class="ri-subtract-line"></i>
+                                        </button>
+                                        <input type="number" 
+                                               class="quantity-input" 
+                                               id="quantity-input" 
+                                               value="1" 
+                                               min="1" 
+                                               max="10">
+                                        <button class="quantity-btn quantity-increase" id="quantity-increase" aria-label="Increase quantity">
+                                            <i class="ri-add-line"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="action-buttons">
+                                    <button class="btn btn--primary btn--large add-to-cart-btn" id="add-to-cart-btn">
+                                        <i class="ri-shopping-cart-line"></i>
+                                        <span class="btn-text">Add to Cart</span>
+                                        <div class="btn-loading" style="display: none;">
+                                            <div class="loading-spinner"></div>
+                                        </div>
+                                    </button>
+                                    
+                                    <button class="btn btn--outline btn--large wishlist-btn" id="wishlist-btn" aria-label="Add to wishlist">
+                                        <i class="ri-heart-line"></i>
+                                    </button>
+                                </div>
+
+                                <div class="secondary-actions">
+                                    <button class="action-link share-btn" id="share-btn">
+                                        <i class="ri-share-line"></i>
+                                        Share Product
+                                    </button>
+                                    <button class="action-link compare-btn" id="compare-btn">
+                                        <i class="ri-scales-line"></i>
+                                        Compare
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Product Features -->
+                            <div class="product-features" id="product-features">
+                                <div class="feature-item">
+                                    <i class="ri-truck-line"></i>
+                                    <div class="feature-content">
+                                        <h4>Free Shipping</h4>
+                                        <p>On orders over ₹500</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="ri-refresh-line"></i>
+                                    <div class="feature-content">
+                                        <h4>Easy Returns</h4>
+                                        <p>30-day return policy</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="ri-shield-check-line"></i>
+                                    <div class="feature-content">
+                                        <h4>Authentic Products</h4>
+                                        <p>100% genuine guarantee</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Details Tabs -->
+            <section class="product-tabs">
+                <div class="container">
+                    <div class="tabs-container">
+                        <div class="tabs-nav">
+                            <button class="tab-btn active" data-tab="specifications">Specifications</button>
+                            <button class="tab-btn" data-tab="ingredients">Ingredients</button>
+                            <button class="tab-btn" data-tab="usage">How to Use</button>
+                            <button class="tab-btn" data-tab="reviews">Reviews</button>
+                        </div>
+
+                        <div class="tabs-content">
+                            <!-- Specifications Tab -->
+                            <div class="tab-panel active" id="specifications-tab">
+                                <div class="specifications-content" id="specifications-content">
+                                    <div class="spec-loading">
+                                        <div class="loading-spinner"></div>
+                                        <p>Loading specifications...</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ingredients Tab -->
+                            <div class="tab-panel" id="ingredients-tab">
+                                <div class="ingredients-content" id="ingredients-content">
+                                    <p>Ingredient information will be displayed here.</p>
+                                </div>
+                            </div>
+
+                            <!-- Usage Tab -->
+                            <div class="tab-panel" id="usage-tab">
+                                <div class="usage-content" id="usage-content">
+                                    <p>Usage instructions will be displayed here.</p>
+                                </div>
+                            </div>
+
+                            <!-- Reviews Tab -->
+                            <div class="tab-panel" id="reviews-tab">
+                                <div class="reviews-content" id="reviews-content">
+                                    <div class="reviews-summary">
+                                        <h3>Customer Reviews</h3>
+                                        <p>Reviews feature coming soon!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Products -->
+            <section class="related-products" id="related-products-section" style="display: none;">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Related Products</h2>
+                        <p class="section-subtitle">You might also like these products</p>
+                    </div>
+                    
+                    <div class="related-products-grid" id="related-products-grid">
+                        <!-- Related products will be loaded dynamically -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Image Zoom Modal -->
+    <div class="zoom-modal" id="zoom-modal">
+        <div class="zoom-modal__overlay"></div>
+        <div class="zoom-modal__content">
+            <button class="zoom-modal__close" id="zoom-modal-close">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="zoom-modal__image-container">
+                <img src="" alt="" class="zoom-modal__image" id="zoom-modal-image">
+            </div>
+            <div class="zoom-modal__nav">
+                <button class="zoom-nav-btn zoom-prev" id="zoom-prev">
+                    <i class="ri-arrow-left-line"></i>
+                </button>
+                <button class="zoom-nav-btn zoom-next" id="zoom-next">
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+            </div>
+            <div class="zoom-modal__thumbnails" id="zoom-modal-thumbnails">
+                <!-- Thumbnails for zoom modal -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <div class="footer__section">
+                        <div class="footer__brand">
+                            <img src="../assets/logo.svg" alt="Riya Collections" class="footer__logo">
+                            <h3 class="footer__title">Riya Collections</h3>
+                        </div>
+                        <p class="footer__description">
+                            Your trusted destination for premium cosmetics and beauty products. 
+                            Discover, shop, and enhance your natural beauty with our curated collection.
+                        </p>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-link" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Instagram">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Twitter">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Quick Links</h4>
+                        <ul class="footer__links">
+                            <li><a href="products.html" class="footer__link">All Products</a></li>
+                            <li><a href="products.html?category=1" class="footer__link">Face Makeup</a></li>
+                            <li><a href="products.html?category=2" class="footer__link">Lip Care</a></li>
+                            <li><a href="products.html?category=3" class="footer__link">Hair Care</a></li>
+                            <li><a href="products.html?category=4" class="footer__link">Skin Care</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Customer Service</h4>
+                        <ul class="footer__links">
+                            <li><a href="contact.html" class="footer__link">Contact Us</a></li>
+                            <li><a href="shipping.html" class="footer__link">Shipping Info</a></li>
+                            <li><a href="returns.html" class="footer__link">Returns & Exchanges</a></li>
+                            <li><a href="faq.html" class="footer__link">FAQ</a></li>
+                            <li><a href="size-guide.html" class="footer__link">Size Guide</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Account</h4>
+                        <ul class="footer__links">
+                            <li><a href="login.html" class="footer__link">Login</a></li>
+                            <li><a href="register.html" class="footer__link">Register</a></li>
+                            <li><a href="profile.html" class="footer__link">My Account</a></li>
+                            <li><a href="orders.html" class="footer__link">Order History</a></li>
+                            <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer__bottom">
+                    <div class="footer__bottom-content">
+                        <p class="footer__copyright">
+                            &copy; 2024 Riya Collections. All rights reserved.
+                        </p>
+                        <div class="footer__legal">
+                            <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+                            <a href="terms.html" class="footer__legal-link">Terms of Service</a>
+                            <a href="cookies.html" class="footer__legal-link">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/api.js"></script>
+    <script src="../src/js/utils.js"></script>
+    <script src="../src/js/components/navigation.js"></script>
+    <script src="../src/js/components/search.js"></script>
+    <script src="../src/js/components/cart.js"></script>
+    <script src="../src/js/product-detail.js"></script>
+    <script src="../src/js/main.js"></script>
+</body>
+</html>

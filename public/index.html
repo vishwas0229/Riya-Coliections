@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riya Collections - Premium Cosmetics & Beauty Products</title>
+    <meta name="description" content="Discover premium cosmetics and beauty products at Riya Collections. Shop face makeup, lip care, hair care, and skincare products from top brands.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/hero-img.jpeg" as="image">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/accessibility.css">
+    
+    <!-- Font preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header" id="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
+            <div class="nav__brand">
+                <img src="assets/logo.svg" alt="Riya Collections - Premium Cosmetics" class="nav__logo">
+                <span class="nav__title">Riya Collections</span>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu" role="menu">
+                <ul class="nav__list" role="menubar">
+                    <li class="nav__item" role="none">
+                        <a href="#home" class="nav__link active-link" role="menuitem" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="#categories" class="nav__link" role="menuitem">Categories</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="pages/products.html" class="nav__link" role="menuitem">Products</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="pages/about.html" class="nav__link" role="menuitem">About</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="pages/contact.html" class="nav__link" role="menuitem">Contact</a>
+                    </li>
+                </ul>
+                
+                <button class="nav__close" id="nav-close" aria-label="Close navigation menu">
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                </button>
+            </div>
+            
+            <div class="nav__actions">
+                <button class="nav__search-btn" id="search-btn" aria-label="Search products" aria-expanded="false" aria-controls="search-overlay">
+                    <i class="ri-search-line" aria-hidden="true"></i>
+                </button>
+                
+                <a href="pages/cart.html" class="nav__cart" aria-label="Shopping cart, 0 items">
+                    <i class="ri-shopping-bag-line" aria-hidden="true"></i>
+                    <span class="nav__cart-count" id="cart-count" aria-label="Cart items count">0</span>
+                </a>
+                
+                <div class="nav__user">
+                    <button class="nav__user-btn" id="user-btn" aria-label="User account menu" aria-expanded="false" aria-haspopup="true" aria-controls="user-menu">
+                        <i class="ri-user-line" aria-hidden="true"></i>
+                    </button>
+                    <div class="nav__user-menu" id="user-menu" role="menu" aria-hidden="true">
+                        <a href="pages/login.html" class="nav__user-link" role="menuitem">Login</a>
+                        <a href="pages/register.html" class="nav__user-link" role="menuitem">Register</a>
+                        <a href="pages/profile.html" class="nav__user-link" role="menuitem">Profile</a>
+                        <a href="pages/orders.html" class="nav__user-link" role="menuitem">Orders</a>
+                    </div>
+                </div>
+                
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Search Overlay -->
+        <div class="search__overlay" id="search-overlay" role="dialog" aria-modal="true" aria-labelledby="search-title" aria-hidden="true">
+            <div class="search__container">
+                <h2 id="search-title" class="sr-only">Search Products</h2>
+                <form class="search__form" id="search-form" role="search">
+                    <label for="search-input" class="sr-only">Search for products, brands, categories</label>
+                    <input type="text" class="search__input" id="search-input" placeholder="Search for products, brands, categories..." aria-describedby="search-help">
+                    <div id="search-help" class="sr-only">Enter keywords to search for products</div>
+                    <button type="submit" class="search__btn" aria-label="Submit search">
+                        <i class="ri-search-line" aria-hidden="true"></i>
+                    </button>
+                </form>
+                <button class="search__close" id="search-close" aria-label="Close search">
+                    <i class="ri-close-line" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="search__results" id="search-results" role="region" aria-label="Search results" aria-live="polite"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <!-- Hero Section -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <span class="hero__subtitle">Premium Beauty Collection</span>
+                        <h1 class="hero__title" id="hero-title">
+                            Discover Your 
+                            <span class="hero__title-accent">Natural Beauty</span>
+                        </h1>
+                        <p class="hero__description">
+                            Explore our curated collection of premium cosmetics and beauty products. 
+                            From face makeup to skincare, find everything you need to enhance your natural glow.
+                        </p>
+                        <div class="hero__buttons">
+                            <a href="#featured-products" class="btn btn--primary hero__cta" aria-describedby="cta-description">
+                                Shop Now
+                                <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                            </a>
+                            <div id="cta-description" class="sr-only">Browse our featured products collection</div>
+                            <a href="#categories" class="btn btn--outline hero__explore">
+                                Explore Categories
+                            </a>
+                        </div>
+                        
+                        <!-- Hero Stats -->
+                        <div class="hero__stats" role="region" aria-label="Company statistics">
+                            <div class="hero__stat">
+                                <span class="hero__stat-number" data-count="500" aria-label="500 premium products">0</span>
+                                <span class="hero__stat-text">Premium Products</span>
+                            </div>
+                            <div class="hero__stat">
+                                <span class="hero__stat-number" data-count="50" aria-label="50 top brands">0</span>
+                                <span class="hero__stat-text">Top Brands</span>
+                            </div>
+                            <div class="hero__stat">
+                                <span class="hero__stat-number" data-count="10000" aria-label="10,000 happy customers">0</span>
+                                <span class="hero__stat-text">Happy Customers</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero__image">
+                        <div class="hero__image-container">
+                            <img src="assets/hero-img.jpeg" alt="Collection of premium beauty products including makeup, skincare, and cosmetics arranged elegantly" class="hero__img">
+                            <div class="hero__image-decoration" aria-hidden="true"></div>
+                        </div>
+                        
+                        <!-- Floating Elements -->
+                        <div class="hero__floating-elements" aria-hidden="true">
+                            <div class="hero__floating-card hero__floating-card--1">
+                                <i class="ri-star-fill" aria-hidden="true"></i>
+                                <span>Premium Quality</span>
+                            </div>
+                            <div class="hero__floating-card hero__floating-card--2">
+                                <i class="ri-truck-line" aria-hidden="true"></i>
+                                <span>Free Shipping</span>
+                            </div>
+                            <div class="hero__floating-card hero__floating-card--3">
+                                <i class="ri-shield-check-line" aria-hidden="true"></i>
+                                <span>100% Authentic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <div class="hero__scroll">
+                    <a href="#categories" class="hero__scroll-link" aria-label="Scroll down to categories section">
+                        <span>Scroll Down</span>
+                        <i class="ri-arrow-down-line" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories section" id="categories" aria-labelledby="categories-title">
+            <div class="container">
+                <header class="section__header">
+                    <span class="section__subtitle">Shop by Category</span>
+                    <h2 class="section__title" id="categories-title">Explore Our Collections</h2>
+                    <p class="section__description">
+                        Discover our carefully curated categories of premium beauty products
+                    </p>
+                </header>
+                
+                <div class="categories__container" id="categories-container" role="region" aria-label="Product categories">
+                    <!-- Categories will be loaded dynamically -->
+                    <div class="categories__loading" role="status" aria-label="Loading categories">
+                        <div class="loading-spinner" aria-hidden="true"></div>
+                        <p>Loading categories...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="featured section" id="featured-products">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Best Sellers</span>
+                    <h2 class="section__title">Featured Products</h2>
+                    <p class="section__description">
+                        Discover our most popular and trending beauty products
+                    </p>
+                </div>
+                
+                <div class="featured__controls">
+                    <div class="featured__tabs">
+                        <button class="featured__tab active" data-category="all">All Products</button>
+                        <button class="featured__tab" data-category="1">Face Makeup</button>
+                        <button class="featured__tab" data-category="2">Lip Care</button>
+                        <button class="featured__tab" data-category="3">Hair Care</button>
+                        <button class="featured__tab" data-category="4">Skin Care</button>
+                    </div>
+                    
+                    <div class="featured__navigation">
+                        <button class="featured__nav-btn featured__prev" id="featured-prev">
+                            <i class="ri-arrow-left-line"></i>
+                        </button>
+                        <button class="featured__nav-btn featured__next" id="featured-next">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="featured__container" id="featured-container">
+                    <div class="featured__carousel" id="featured-carousel">
+                        <!-- Products will be loaded dynamically -->
+                        <div class="featured__loading">
+                            <div class="loading-spinner"></div>
+                            <p>Loading featured products...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="featured__view-all">
+                    <a href="pages/products.html" class="btn btn--outline">
+                        View All Products
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotional Sections -->
+        <section class="promotions section">
+            <div class="container">
+                <div class="promotions__grid">
+                    <!-- Special Offer -->
+                    <div class="promotion__card promotion__card--primary">
+                        <div class="promotion__content">
+                            <span class="promotion__badge">Limited Time</span>
+                            <h3 class="promotion__title">Summer Sale</h3>
+                            <p class="promotion__description">
+                                Get up to 50% off on selected beauty products
+                            </p>
+                            <a href="pages/products.html?sale=true" class="btn btn--white">
+                                Shop Sale
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                        <div class="promotion__image">
+                            <img src="assets/categories/Face_Makeup.png" alt="Summer Sale" class="promotion__img">
+                        </div>
+                    </div>
+                    
+                    <!-- New Arrivals -->
+                    <div class="promotion__card promotion__card--secondary">
+                        <div class="promotion__content">
+                            <span class="promotion__badge">New</span>
+                            <h3 class="promotion__title">New Arrivals</h3>
+                            <p class="promotion__description">
+                                Discover the latest beauty trends and products
+                            </p>
+                            <a href="pages/products.html?new=true" class="btn btn--primary">
+                                Explore New
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                        <div class="promotion__image">
+                            <img src="assets/categories/Lip_Care.png" alt="New Arrivals" class="promotion__img">
+                        </div>
+                    </div>
+                    
+                    <!-- Free Shipping -->
+                    <div class="promotion__card promotion__card--accent">
+                        <div class="promotion__content">
+                            <span class="promotion__badge">Free</span>
+                            <h3 class="promotion__title">Free Shipping</h3>
+                            <p class="promotion__description">
+                                On orders above ₹999. No minimum purchase required
+                            </p>
+                            <a href="pages/products.html" class="btn btn--outline">
+                                Start Shopping
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                        <div class="promotion__icon">
+                            <i class="ri-truck-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features section">
+            <div class="container">
+                <div class="features__grid">
+                    <div class="feature__card">
+                        <div class="feature__icon">
+                            <i class="ri-shield-check-line"></i>
+                        </div>
+                        <h3 class="feature__title">100% Authentic</h3>
+                        <p class="feature__description">
+                            All products are sourced directly from authorized distributors
+                        </p>
+                    </div>
+                    
+                    <div class="feature__card">
+                        <div class="feature__icon">
+                            <i class="ri-truck-line"></i>
+                        </div>
+                        <h3 class="feature__title">Fast Delivery</h3>
+                        <p class="feature__description">
+                            Quick and secure delivery to your doorstep within 2-5 days
+                        </p>
+                    </div>
+                    
+                    <div class="feature__card">
+                        <div class="feature__icon">
+                            <i class="ri-customer-service-2-line"></i>
+                        </div>
+                        <h3 class="feature__title">24/7 Support</h3>
+                        <p class="feature__description">
+                            Our customer support team is always ready to help you
+                        </p>
+                    </div>
+                    
+                    <div class="feature__card">
+                        <div class="feature__icon">
+                            <i class="ri-refresh-line"></i>
+                        </div>
+                        <h3 class="feature__title">Easy Returns</h3>
+                        <p class="feature__description">
+                            Hassle-free returns within 30 days of purchase
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter section">
+            <div class="container">
+                <div class="newsletter__container">
+                    <div class="newsletter__content">
+                        <h2 class="newsletter__title">Stay Updated</h2>
+                        <p class="newsletter__description">
+                            Subscribe to our newsletter and get the latest beauty tips, product launches, and exclusive offers
+                        </p>
+                        
+                        <form class="newsletter__form" id="newsletter-form">
+                            <div class="newsletter__input-group">
+                                <input type="email" class="newsletter__input" placeholder="Enter your email address" required>
+                                <button type="submit" class="newsletter__btn">
+                                    Subscribe
+                                    <i class="ri-send-plane-line"></i>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <p class="newsletter__privacy">
+                            We respect your privacy. Unsubscribe at any time.
+                        </p>
+                    </div>
+                    
+                    <div class="newsletter__image">
+                        <img src="assets/categories/Skin_Care.png" alt="Beauty Newsletter" class="newsletter__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <div class="footer__section">
+                        <div class="footer__brand">
+                            <img src="assets/logo.svg" alt="Riya Collections" class="footer__logo">
+                            <h3 class="footer__title">Riya Collections</h3>
+                        </div>
+                        <p class="footer__description">
+                            Your trusted destination for premium cosmetics and beauty products. 
+                            Discover, shop, and enhance your natural beauty with our curated collection.
+                        </p>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-link" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Instagram">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="Twitter">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="#" class="footer__social-link" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Quick Links</h4>
+                        <ul class="footer__links">
+                            <li><a href="pages/products.html" class="footer__link">All Products</a></li>
+                            <li><a href="pages/products.html?category=1" class="footer__link">Face Makeup</a></li>
+                            <li><a href="pages/products.html?category=2" class="footer__link">Lip Care</a></li>
+                            <li><a href="pages/products.html?category=3" class="footer__link">Hair Care</a></li>
+                            <li><a href="pages/products.html?category=4" class="footer__link">Skin Care</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Customer Service</h4>
+                        <ul class="footer__links">
+                            <li><a href="pages/contact.html" class="footer__link">Contact Us</a></li>
+                            <li><a href="pages/shipping.html" class="footer__link">Shipping Info</a></li>
+                            <li><a href="pages/returns.html" class="footer__link">Returns & Exchanges</a></li>
+                            <li><a href="pages/faq.html" class="footer__link">FAQ</a></li>
+                            <li><a href="pages/size-guide.html" class="footer__link">Size Guide</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">Account</h4>
+                        <ul class="footer__links">
+                            <li><a href="pages/login.html" class="footer__link">Login</a></li>
+                            <li><a href="pages/register.html" class="footer__link">Register</a></li>
+                            <li><a href="pages/profile.html" class="footer__link">My Account</a></li>
+                            <li><a href="pages/orders.html" class="footer__link">Order History</a></li>
+                            <li><a href="pages/wishlist.html" class="footer__link">Wishlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer__bottom">
+                    <div class="footer__bottom-content">
+                        <p class="footer__copyright">
+                            &copy; 2024 Riya Collections. All rights reserved.
+                        </p>
+                        <div class="footer__legal">
+                            <a href="pages/privacy.html" class="footer__legal-link">Privacy Policy</a>
+                            <a href="pages/terms.html" class="footer__legal-link">Terms of Service</a>
+                            <a href="pages/cookies.html" class="footer__legal-link">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay hidden" id="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/api-init.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/components/accessibility.js"></script>
+    <script src="assets/js/components/lazy-loading.js"></script>
+    <script src="assets/js/components/category-display.js"></script>
+    <script src="assets/js/components/navigation.js"></script>
+    <script src="assets/js/components/search.js"></script>
+    <script src="assets/js/components/cart.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script>
+        // Initialize animations
+        new AnimationController();
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

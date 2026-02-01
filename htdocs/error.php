@@ -1,132 +1,234 @@
 <?php
 /**
- * Error Page Handler
+ * Custom Error Page for Riya Collections
  * 
- * This page handles HTTP error responses and provides user-friendly error messages
- * while maintaining security by not exposing system details.
+ * This page handles HTTP error responses with user-friendly messages
  */
 
-$errorCode = $_GET['code'] ?? '500';
+// Get error code from query parameter or default to 500
+$errorCode = isset($_GET['code']) ? (int)$_GET['code'] : 500;
+
+// Define error messages
 $errorMessages = [
-    '400' => 'Bad Request - The request could not be understood by the server.',
-    '401' => 'Unauthorized - Authentication is required to access this resource.',
-    '403' => 'Forbidden - You do not have permission to access this resource.',
-    '404' => 'Not Found - The requested resource could not be found.',
-    '405' => 'Method Not Allowed - The request method is not supported for this resource.',
-    '429' => 'Too Many Requests - Rate limit exceeded. Please try again later.',
-    '500' => 'Internal Server Error - An unexpected error occurred.',
-    '502' => 'Bad Gateway - The server received an invalid response from an upstream server.',
-    '503' => 'Service Unavailable - The server is temporarily unavailable.',
-    '504' => 'Gateway Timeout - The server did not receive a timely response from an upstream server.'
+    400 => [
+        'title' => 'Bad Request',
+        'message' => 'The request could not be understood by the server.',
+        'description' => 'Please check your request and try again.'
+    ],
+    401 => [
+        'title' => 'Unauthorized',
+        'message' => 'Authentication is required to access this resource.',
+        'description' => 'Please log in and try again.'
+    ],
+    403 => [
+        'title' => 'Forbidden',
+        'message' => 'You do not have permission to access this resource.',
+        'description' => 'Contact support if you believe this is an error.'
+    ],
+    404 => [
+        'title' => 'Page Not Found',
+        'message' => 'The requested page could not be found.',
+        'description' => 'The page may have been moved or deleted.'
+    ],
+    500 => [
+        'title' => 'Internal Server Error',
+        'message' => 'An unexpected error occurred on the server.',
+        'description' => 'Please try again later or contact support if the problem persists.'
+    ],
+    503 => [
+        'title' => 'Service Unavailable',
+        'message' => 'The service is temporarily unavailable.',
+        'description' => 'Please try again in a few minutes.'
+    ]
 ];
 
-$message = $errorMessages[$errorCode] ?? 'An error occurred.';
+// Get error details or use default
+$error = isset($errorMessages[$errorCode]) ? $errorMessages[$errorCode] : $errorMessages[500];
 
 // Set appropriate HTTP status code
-http_response_code((int) $errorCode);
+http_response_code($errorCode);
 
 // Check if this is an API request
 $isApiRequest = strpos($_SERVER['REQUEST_URI'] ?? '', '/api/') === 0 || 
-                strpos($_SERVER['HTTP_ACCEPT'] ?? '', 'application/json') !== false;
+                (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false);
 
 if ($isApiRequest) {
-    // Return JSON error response for API requests
+    // Return JSON response for API requests
     header('Content-Type: application/json');
     echo json_encode([
         'success' => false,
-        'message' => $message,
-        'data' => null,
-        'errors' => [
-            [
-                'code' => $errorCode,
-                'message' => $message
-            ]
-        ]
-    ]);
-} else {
-    // Return HTML error page for browser requests
-    ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Error <?php echo htmlspecialchars($errorCode); ?> - Riya Collections</title>
-        <style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                margin: 0;
-                padding: 0;
-                background: linear-gradient(135deg, #E91E63, #F8BBD9);
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+        'error' => [
+            'code' => $errorCode,
+            'title' => $error['title'],
+            'message' => $error['message']
+        ],
+        'timestamp' => date('Y-m-d H:i:s')
+    ], JSON_PRETTY_PRINT);
+    exit;
+}
+
+// Return HTML response for web requests
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $errorCode; ?> - <?php echo htmlspecialchars($error['title']); ?> | Riya Collections</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .error-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            margin: 2rem;
+        }
+        
+        .error-code {
+            font-size: 6rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+        
+        .error-message {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        
+        .error-description {
+            font-size: 1rem;
+            color: #718096;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .btn-secondary:hover {
+            background: #cbd5e0;
+            transform: translateY(-1px);
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: #667eea;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 480px) {
             .error-container {
-                background: white;
                 padding: 2rem;
-                border-radius: 10px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                text-align: center;
-                max-width: 500px;
-                margin: 1rem;
             }
+            
             .error-code {
                 font-size: 4rem;
-                font-weight: bold;
-                color: #E91E63;
-                margin: 0;
             }
-            .error-message {
-                font-size: 1.2rem;
-                color: #333;
-                margin: 1rem 0;
+            
+            .error-title {
+                font-size: 1.5rem;
             }
-            .error-description {
-                color: #666;
-                margin: 1rem 0;
+            
+            .action-buttons {
+                flex-direction: column;
             }
-            .back-button {
-                display: inline-block;
-                background: #E91E63;
-                color: white;
-                padding: 0.75rem 1.5rem;
-                text-decoration: none;
-                border-radius: 5px;
-                margin-top: 1rem;
-                transition: background 0.3s;
-            }
-            .back-button:hover {
-                background: #C2185B;
-            }
-            .logo {
-                margin-bottom: 1rem;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="error-container">
-            <div class="logo">
-                <h2 style="color: #E91E63; margin: 0;">Riya Collections</h2>
-            </div>
-            <h1 class="error-code"><?php echo htmlspecialchars($errorCode); ?></h1>
-            <p class="error-message"><?php echo htmlspecialchars($message); ?></p>
-            <p class="error-description">
-                <?php if ($errorCode === '404'): ?>
-                    The page you're looking for might have been moved, deleted, or you entered the wrong URL.
-                <?php elseif ($errorCode === '500'): ?>
-                    We're experiencing some technical difficulties. Please try again later.
-                <?php elseif ($errorCode === '403'): ?>
-                    You don't have permission to access this resource. Please contact support if you believe this is an error.
-                <?php else: ?>
-                    Please try again or contact our support team if the problem persists.
-                <?php endif; ?>
-            </p>
-            <a href="/" class="back-button">Go to Homepage</a>
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="logo">RC</div>
+        
+        <div class="error-code"><?php echo $errorCode; ?></div>
+        
+        <h1 class="error-title"><?php echo htmlspecialchars($error['title']); ?></h1>
+        
+        <p class="error-message"><?php echo htmlspecialchars($error['message']); ?></p>
+        
+        <p class="error-description"><?php echo htmlspecialchars($error['description']); ?></p>
+        
+        <div class="action-buttons">
+            <a href="/" class="btn btn-primary">Go Home</a>
+            <button onclick="history.back()" class="btn btn-secondary">Go Back</button>
         </div>
-    </body>
-    </html>
-    <?php
-}
-?>
+    </div>
+    
+    <script>
+        // Auto-refresh for 503 errors (service unavailable)
+        <?php if ($errorCode === 503): ?>
+        setTimeout(function() {
+            window.location.reload();
+        }, 30000); // Refresh after 30 seconds
+        <?php endif; ?>
+    </script>
+</body>
+</html>

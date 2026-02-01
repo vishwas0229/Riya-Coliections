@@ -1,0 +1,380 @@
+/**
+ * Image Optimization and Lazy Loading Styles
+ * 
+ * Provides styles for optimized image display and lazy loading functionality
+ * Requirements: 13.1, 13.2, 13.3 - Image optimization and lazy loading
+ */
+
+/*=============== IMAGE CONTAINERS ===============*/
+.lazy-image-container {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--gray-color), var(--gray-color-light));
+  border-radius: var(--border-radius);
+}
+
+.lazy-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  animation: shimmer 1.5s infinite;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.lazy-image-container.loading::before {
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/*=============== LAZY LOADING STATES ===============*/
+.lazy-loading {
+  opacity: 0.7;
+  transition: opacity var(--transition-slow);
+  filter: blur(2px);
+}
+
+.lazy-loaded {
+  opacity: 1;
+  filter: none;
+}
+
+.lazy-error {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+/*=============== RESPONSIVE IMAGES ===============*/
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all var(--transition-normal);
+}
+
+.responsive-image:hover {
+  transform: scale(1.05);
+}
+
+/*=============== PRODUCT IMAGES ===============*/
+.product__image {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: var(--gray-color);
+}
+
+.product__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all var(--transition-normal);
+}
+
+.product__card:hover .product__img {
+  transform: scale(1.1);
+}
+
+/*=============== CATEGORY IMAGES ===============*/
+.category__image {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  background: var(--gray-color);
+}
+
+.category__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all var(--transition-slow);
+}
+
+.category__card:hover .category__img {
+  transform: scale(1.1);
+}
+
+/*=============== IMAGE GALLERY ===============*/
+.image-gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*=============== PROGRESSIVE LOADING ===============*/
+.progressive-image {
+  position: relative;
+}
+
+.progressive-image .low-quality {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+  transform: scale(1.1);
+  transition: opacity var(--transition-slow);
+  z-index: 1;
+}
+
+.progressive-image .high-quality {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.progressive-image.loaded .low-quality {
+  opacity: 0;
+}
+
+.progressive-image.loaded .high-quality {
+  opacity: 1;
+}
+
+/*=============== IMAGE PLACEHOLDERS ===============*/
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-color);
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  text-align: center;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+}
+
+.image-placeholder i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+/*=============== LOADING INDICATORS ===============*/
+.image-loading {
+  position: relative;
+}
+
+.image-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--gray-color-dark);
+  border-top: 2px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*=============== ERROR STATES ===============*/
+.image-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-color);
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  text-align: center;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  min-height: 150px;
+}
+
+.image-error i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--error-color);
+}
+
+.image-error .retry-btn {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--smaller-font-size);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.image-error .retry-btn:hover {
+  background: var(--primary-color-dark);
+}
+
+/*=============== WEBP SUPPORT ===============*/
+.webp .webp-image {
+  display: block;
+}
+
+.webp .fallback-image {
+  display: none;
+}
+
+.no-webp .webp-image {
+  display: none;
+}
+
+.no-webp .fallback-image {
+  display: block;
+}
+
+/*=============== RESPONSIVE BREAKPOINTS ===============*/
+@media screen and (max-width: 768px) {
+  .image-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .product__image,
+  .category__image {
+    border-radius: var(--border-radius);
+  }
+  
+  .lazy-image-container::before {
+    animation-duration: 2s;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .image-placeholder {
+    padding: 1rem;
+    font-size: var(--smaller-font-size);
+  }
+  
+  .image-placeholder i {
+    font-size: 1.5rem;
+  }
+}
+
+/*=============== PRINT STYLES ===============*/
+@media print {
+  .lazy-loading,
+  .lazy-loaded {
+    opacity: 1 !important;
+    filter: none !important;
+  }
+  
+  .lazy-image-container::before {
+    display: none !important;
+  }
+  
+  .image-loading::after {
+    display: none !important;
+  }
+}
+
+/*=============== HIGH CONTRAST MODE ===============*/
+@media (prefers-contrast: high) {
+  .lazy-image-container {
+    border: 2px solid var(--text-color);
+  }
+  
+  .image-placeholder {
+    border: 2px solid var(--text-color);
+    background: var(--white-color);
+    color: var(--text-color);
+  }
+}
+
+/*=============== REDUCED MOTION ===============*/
+@media (prefers-reduced-motion: reduce) {
+  .lazy-loading,
+  .lazy-loaded,
+  .progressive-image .low-quality,
+  .progressive-image .high-quality,
+  .responsive-image,
+  .product__img,
+  .category__img {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .lazy-image-container::before {
+    animation: none !important;
+  }
+  
+  .product__card:hover .product__img,
+  .category__card:hover .category__img,
+  .responsive-image:hover {
+    transform: none !important;
+  }
+}
+
+/*=============== DARK MODE SUPPORT ===============*/
+@media (prefers-color-scheme: dark) {
+  .lazy-image-container {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+  }
+  
+  .image-placeholder {
+    background: #2a2a2a;
+    color: #888;
+  }
+  
+  .image-error {
+    background: #2a2a2a;
+    color: #888;
+  }
+}

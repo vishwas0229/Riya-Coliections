@@ -4,9 +4,13 @@
  * 
  * This module handles environment variable loading and configuration management
  * for different deployment environments (development, production, testing).
+ * Enhanced with configuration management system integration.
  * 
  * Requirements: 14.2, 14.4
  */
+
+// Load configuration management system
+require_once __DIR__ . '/ConfigManager.php';
 
 /**
  * Load environment variables from .env file
@@ -53,7 +57,7 @@ function loadEnvironmentVariables() {
 }
 
 /**
- * Get environment variable with default value
+ * Get environment variable with default value and type conversion
  */
 function env($key, $default = null) {
     $value = getenv($key);
@@ -79,6 +83,30 @@ function env($key, $default = null) {
     }
     
     return $value;
+}
+
+/**
+ * Get configuration value using the ConfigManager
+ */
+if (!function_exists('config')) {
+    function config($key = null, $default = null) {
+        static $configManager = null;
+        
+        if ($configManager === null) {
+            try {
+                $configManager = ConfigManager::getInstance();
+            } catch (Exception $e) {
+                // Fallback to environment variables if ConfigManager fails
+                return $key ? env($key, $default) : null;
+            }
+        }
+        
+        if ($key === null) {
+            return $configManager;
+        }
+        
+        return $configManager->get($key, $default);
+    }
 }
 
 /**
@@ -110,25 +138,26 @@ function isTesting() {
 }
 
 /**
- * Get application configuration
+ * Get application configuration with enhanced features
  */
 function getAppConfig() {
     return [
-        'name' => env('APP_NAME', 'Riya Collections'),
-        'env' => env('APP_ENV', 'production'),
-        'debug' => isDebugMode(),
-        'url' => env('APP_URL', 'https://riyacollections.com'),
-        'timezone' => env('APP_TIMEZONE', 'UTC'),
-        'locale' => env('APP_LOCALE', 'en'),
-        'version' => env('APP_VERSION', '1.0.0')
+        'name' => config('app.name', env('APP_NAME', 'Riya Collections')),
+        'env' => config('app.env', env('APP_ENV', 'production')),
+        'debug' => config('app.debug', env('APP_DEBUG', false)),
+        'url' => config('app.url', env('APP_URL', 'https://riyacollections.com')),
+        'timezone' => config('app.timezone', env('APP_TIMEZONE', 'UTC')),
+        'locale' => config('app.locale', env('APP_LOCALE', 'en')),
+        'version' => config('app.version', env('APP_VERSION', '1.0.0')),
+        'maintenance_mode' => config('app.maintenance_mode', env('MAINTENANCE_MODE', false))
     ];
 }
 
 /**
- * Get database configuration
+ * Get database configuration with enhanced connection management
  */
 function getDatabaseConfig() {
-    return [
+    return config('database.connections.mysql', [
         'host' => env('DB_HOST', 'localhost'),
         'port' => env('DB_PORT', '3306'),
         'database' => env('DB_NAME', 'riya_collections'),
@@ -137,89 +166,122 @@ function getDatabaseConfig() {
         'charset' => env('DB_CHARSET', 'utf8mb4'),
         'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
         'connection_limit' => (int) env('DB_CONNECTION_LIMIT', 10)
-    ];
+    ]);
 }
 
 /**
- * Get JWT configuration
+ * Get JWT configuration with enhanced security
  */
 function getJWTConfig() {
-    return [
+    return config('security.jwt', [
         'secret' => env('JWT_SECRET', 'fallback_secret_change_in_production'),
         'expires_in' => env('JWT_EXPIRES_IN', '24h'),
         'refresh_secret' => env('JWT_REFRESH_SECRET', 'fallback_refresh_secret'),
         'refresh_expires_in' => env('JWT_REFRESH_EXPIRES_IN', '7d'),
         'issuer' => env('JWT_ISSUER', 'riya-collections'),
         'audience' => env('JWT_AUDIENCE', 'riya-collections-users')
-    ];
+    ]);
 }
 
 /**
- * Get email configuration
+ * Get email configuration with enhanced features
  */
 function getEmailConfig() {
-    return [
-        'host' => env('SMTP_HOST', 'smtp.gmail.com'),
-        'port' => (int) env('SMTP_PORT', 587),
-        'secure' => env('SMTP_SECURE', 'false') === 'true',
-        'username' => env('SMTP_USER'),
-        'password' => env('SMTP_PASSWORD'),
-        'from_email' => env('COMPANY_EMAIL', 'orders@riyacollections.com'),
-        'from_name' => env('COMPANY_NAME', 'Riya Collections'),
-        'support_email' => env('SUPPORT_EMAIL', 'support@riyacollections.com')
-    ];
+    return config('email', [
+        'default' => env('MAIL_MAILER', 'smtp'),
+        'from' => [
+            'address' => env('MAIL_FROM_ADDRESS', env('COMPANY_EMAIL', 'orders@riyacollections.com')),
+            'name' => env('MAIL_FROM_NAME', env('COMPANY_NAME', 'Riya Collections'))
+        ],
+        'mailers' => [
+            'smtp' => [
+                'host' => env('SMTP_HOST', 'smtp.gmail.com'),
+                'port' => (int) env('SMTP_PORT', 587),
+                'secure' => env('SMTP_SECURE', 'false') === 'true',
+                'username' => env('SMTP_USER'),
+                'password' => env('SMTP_PASSWORD'),
+                'timeout' => 30
+            ]
+        ]
+    ]);
 }
 
 /**
- * Get Razorpay configuration
+ * Get Razorpay configuration with enhanced security
  */
 function getRazorpayConfig() {
-    return [
+    return config('payment.gateways.razorpay', [
         'key_id' => env('RAZORPAY_KEY_ID'),
         'key_secret' => env('RAZORPAY_KEY_SECRET'),
         'webhook_secret' => env('RAZORPAY_WEBHOOK_SECRET'),
-        'currency' => env('RAZORPAY_CURRENCY', 'INR')
-    ];
+        'currency' => env('RAZORPAY_CURRENCY', 'INR'),
+        'test_mode' => env('RAZORPAY_TEST_MODE', !isProduction())
+    ]);
 }
 
 /**
- * Get file upload configuration
+ * Get file upload configuration with enhanced security
  */
 function getUploadConfig() {
-    return [
-        'path' => env('UPLOAD_PATH', 'uploads'),
-        'max_file_size' => (int) env('MAX_FILE_SIZE', 5242880), // 5MB
-        'allowed_types' => explode(',', env('ALLOWED_FILE_TYPES', 'image/jpeg,image/png,image/webp')),
-        'image_quality' => (int) env('IMAGE_QUALITY', 85),
-        'max_width' => (int) env('MAX_IMAGE_WIDTH', 1920),
-        'max_height' => (int) env('MAX_IMAGE_HEIGHT', 1080)
-    ];
+    return config('upload', [
+        'limits' => [
+            'max_file_size' => (int) env('MAX_FILE_SIZE', 5242880), // 5MB
+            'allowed_extensions' => explode(',', env('ALLOWED_FILE_TYPES', 'jpg,jpeg,png,webp')),
+            'max_files' => (int) env('UPLOAD_MAX_FILES', 10)
+        ],
+        'image' => [
+            'quality' => (int) env('IMAGE_QUALITY', 85),
+            'max_width' => (int) env('MAX_IMAGE_WIDTH', 1920),
+            'max_height' => (int) env('MAX_IMAGE_HEIGHT', 1080)
+        ],
+        'security' => [
+            'scan_uploads' => env('UPLOAD_SCAN_SECURITY', true) === true,
+            'virus_scan' => env('UPLOAD_VIRUS_SCAN', false) === true
+        ]
+    ]);
 }
 
 /**
- * Get security configuration
+ * Get security configuration with enhanced features
  */
 function getSecurityConfig() {
-    return [
-        'rate_limit_window' => (int) env('RATE_LIMIT_WINDOW_MS', 900000), // 15 minutes
-        'rate_limit_max' => (int) env('RATE_LIMIT_MAX_REQUESTS', 100),
-        'session_secret' => env('SESSION_SECRET', 'fallback_session_secret'),
-        'bcrypt_rounds' => (int) env('BCRYPT_SALT_ROUNDS', 12),
-        'allowed_origins' => explode(',', env('ALLOWED_ORIGINS', 'https://riyacollections.com'))
-    ];
+    return config('security', [
+        'rate_limiting' => [
+            'enabled' => env('RATE_LIMITING_ENABLED', true) === true,
+            'window' => (int) env('RATE_LIMIT_WINDOW_MS', 900000), // 15 minutes
+            'max_requests' => (int) env('RATE_LIMIT_MAX_REQUESTS', 100)
+        ],
+        'cors' => [
+            'allowed_origins' => explode(',', env('ALLOWED_ORIGINS', 'https://riyacollections.com')),
+            'supports_credentials' => true
+        ],
+        'encryption' => [
+            'cipher' => 'AES-256-CBC',
+            'key' => env('ENCRYPTION_KEY', 'fallback_key_change_in_production')
+        ],
+        'hashing' => [
+            'bcrypt_rounds' => (int) env('BCRYPT_SALT_ROUNDS', 12)
+        ]
+    ]);
 }
 
 /**
- * Get logging configuration
+ * Get logging configuration with enhanced features
  */
 function getLoggingConfig() {
-    return [
-        'level' => env('LOG_LEVEL', 'info'),
-        'file' => env('LOG_FILE', 'logs/app.log'),
-        'max_files' => (int) env('LOG_MAX_FILES', 10),
-        'max_size' => env('LOG_MAX_SIZE', '10MB'),
-        'enable_daily_rotation' => env('LOG_DAILY_ROTATION', 'true') === 'true'
-    ];
+    return config('logging', [
+        'default' => env('LOG_CHANNEL', 'file'),
+        'channels' => [
+            'file' => [
+                'driver' => 'file',
+                'path' => env('LOG_FILE', 'logs/app.log'),
+                'level' => env('LOG_LEVEL', 'info'),
+                'max_files' => (int) env('LOG_MAX_FILES', 10),
+                'max_size' => env('LOG_MAX_SIZE', '10MB'),
+                'daily' => env('LOG_DAILY_ROTATION', 'true') === 'true'
+            ]
+        ]
+    ]);
 }
 
 /**
@@ -298,8 +360,10 @@ function configurePHP() {
     
     // File upload limits
     $uploadConfig = getUploadConfig();
-    ini_set('upload_max_filesize', $uploadConfig['max_file_size']);
-    ini_set('post_max_size', $uploadConfig['max_file_size'] * 2);
+    if (isset($uploadConfig['limits']['max_file_size'])) {
+        ini_set('upload_max_filesize', $uploadConfig['limits']['max_file_size']);
+        ini_set('post_max_size', $uploadConfig['limits']['max_file_size'] * 2);
+    }
     ini_set('max_file_uploads', 10);
     
     // Memory and execution limits
