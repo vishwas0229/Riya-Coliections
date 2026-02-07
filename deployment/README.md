@@ -56,20 +56,29 @@ deployment/
 
 ## Quick Start
 
-1. **Choose your hosting environment:**
+### Automated Deployment
+
+```bash
+# Production deployment with backup and tests
+./deployment/scripts/deploy.sh production --backup --test
+
+# Staging deployment
+./deployment/scripts/deploy.sh staging
+```
+
+### Manual Deployment
+
+1. **Choose your hosting guide:**
+   - [Complete Deployment Guide](DEPLOYMENT_GUIDE.md) - Comprehensive guide for all environments
    - [InfinityFree Deployment](infinityfree/deploy.md) - For InfinityFree hosting
-   - [Generic PHP Hosting](shared/deployment_checklist.md) - For other PHP hosts
+   - [Deployment Checklist](shared/deployment_checklist.md) - Quick checklist
 
-2. **Prepare your environment:**
-   - Copy `.env.example` to `.env` and configure
-   - Set database credentials and other settings
-   - Ensure web server points to `public/` directory as document root
-
-3. **Deploy the application:**
-   - Upload entire project structure to server
-   - Set web server document root to `public/` directory
-   - Run database migrations from `database/migrations/`
-   - Follow the specific guide for your hosting provider
+2. **Basic steps:**
+   - Upload files to server
+   - Point document root to `public/` directory
+   - Configure `.env` file
+   - Import database migrations
+   - Set file permissions
 
 ## Key Deployment Notes
 

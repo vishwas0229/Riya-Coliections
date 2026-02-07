@@ -1,0 +1,12 @@
+[07-Feb-2026 16:41:48 UTC] Database connection attempt failed
+[07-Feb-2026 16:41:49 UTC] Database connection attempt failed
+[07-Feb-2026 16:41:51 UTC] Database connection attempt failed
+[07-Feb-2026 16:41:51 UTC] Failed to establish database connection after 3 attempts
+[07-Feb-2026 16:41:51 UTC] Database initialization failed during include
+[07-Feb-2026 16:41:51 UTC] PHP Deprecated:  AssetPermissionException::__construct(): Implicitly marking parameter $previous as nullable is deprecated, the explicit nullable type must be used instead in /home/vishwas/Desktop/Riya-Collection/app/services/AssetServer.php on line 23
+[07-Feb-2026 16:41:51 UTC] PHP Deprecated:  AssetCorruptionException::__construct(): Implicitly marking parameter $previous as nullable is deprecated, the explicit nullable type must be used instead in /home/vishwas/Desktop/Riya-Collection/app/services/AssetServer.php on line 32
+[07-Feb-2026 16:41:51 UTC] Database connection attempt failed
+[07-Feb-2026 16:41:52 UTC] Database connection attempt failed
+[07-Feb-2026 16:41:54 UTC] Database connection attempt failed
+[07-Feb-2026 16:41:54 UTC] Failed to establish database connection after 3 attempts
+[07-Feb-2026 16:41:54 UTC] Database initialization failed during include
