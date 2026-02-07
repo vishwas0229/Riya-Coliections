@@ -145,13 +145,16 @@ RewriteRule ^(app|storage|database|tests|deployment)/ - [F,L]
     Header always set Access-Control-Max-Age "86400"
 </IfModule>
 
-# URL Rewriting Rules
+# URL Rewriting Rules - Frontend: index.html, Backend: config.php
 
-# Handle API requests - route to index.php
+# Default document - serve index.html for homepage
+DirectoryIndex index.html
+
+# Handle API requests - route to config.php (backend)
 RewriteCond %{REQUEST_URI} ^/api/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [QSA,L]
+RewriteRule ^(.*)$ config.php [QSA,L]
 
 # Handle static assets - serve directly if they exist
 RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|otf|eot|ico|pdf)$
@@ -163,16 +166,16 @@ RewriteCond %{REQUEST_URI} ^/uploads/
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^(.*)$ - [L]
 
-# Handle missing static assets - route to index.php for proper 404 handling
-RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|otf|eot|ico|pdf)$
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php [QSA,L]
+# Handle pages directory - serve HTML files directly
+RewriteCond %{REQUEST_URI} ^/pages/
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.*)$ - [L]
 
-# Handle frontend SPA routes - route everything else to index.php
+# Frontend SPA routes - serve index.html for all other routes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/api/
-RewriteRule ^(.*)$ index.php [QSA,L]
+RewriteRule ^(.*)$ index.html [L]
 
 # Prevent access to PHP files in assets directory
 <FilesMatch "\.php$">
@@ -203,9 +206,9 @@ RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
 
 # Error pages
-ErrorDocument 404 /index.php
-ErrorDocument 403 /index.php
-ErrorDocument 500 /index.php
+ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html
+ErrorDocument 500 /index.html
 
 # Disable server signature
 ServerSignature Off
